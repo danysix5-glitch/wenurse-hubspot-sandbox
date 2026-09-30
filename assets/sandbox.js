@@ -536,15 +536,16 @@
     hinweis('Screenshot-Modus · Taste C bringt die Leiste zurück');
   });
 
-  /* Fokus-Modus: Mittlere und rechte Spalte abdunkeln (Standard: an).
-     Im Pur-Modus nie – dort soll die Ansicht wie in HubSpot aussehen. */
+  /* Fokus-Modus: mittlere und rechte Spalte leicht ausblenden, damit der Blick
+     auf der linken Spalte bleibt (Standard: an, Taste F schaltet um). Gilt auch im
+     Pur-Modus – dort ist die Leiste ausgeblendet, die Taste F wirkt trotzdem. */
   const fokusSchalter = document.getElementById('sb-fokus-schalter');
   function fokusSetzen(an) {
-    document.body.classList.toggle('sb-fokus', an && !PUR);
-    if (fokusSchalter) fokusSchalter.checked = an && !PUR;
+    document.body.classList.toggle('sb-fokus', an);
+    if (fokusSchalter) fokusSchalter.checked = an;
   }
-  fokusSetzen(!PUR);
-  if (fokusSchalter && !PUR) {
+  fokusSetzen(true);
+  if (fokusSchalter) {
     fokusSchalter.addEventListener('change', function () { fokusSetzen(fokusSchalter.checked); });
   }
 
