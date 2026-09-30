@@ -61,6 +61,12 @@
 .sb-wahl option, .sb-wahl optgroup { background: #fff; color: #1b2733; }
 .sb-wahl optgroup { font-style: normal; font-weight: 600; }
 
+/* ---------- 0. Spaltenbreiten je Objekt ----------------------------------- */
+/* Kontakt-Ansichten: links mehr Platz (Standard-Ansicht) – dort stehen die
+   Stammdaten, das assoziierte Lead-Objekt und die längeren Feldbezeichnungen. */
+body.sb-objekt-kontakt { --hs-links: 384px; }
+body.sb-objekt-unternehmen { --hs-links: 340px; }
+
 /* Fokus-Modus: Mitte und rechts abdunkeln, linke Spalte bleibt klar */
 body.sb-fokus .hs-col--mitte,
 body.sb-fokus .hs-col--rechts {

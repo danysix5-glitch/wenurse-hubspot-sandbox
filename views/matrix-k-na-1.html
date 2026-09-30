@@ -16,7 +16,7 @@
      AUTOMATISCH ERZEUGT aus Sandbox-Matrizen.xlsx – nicht von Hand bearbeiten.
      Segment K-NA-1: Nurse-Bewerbung · New registration & contact initiated
      Objekt: kontakt · Filter: Talent, Talent - New registration, contact initiated
-     Erzeugt am 30.09.2026 09:43 · Grundlage: Excel Datensätze (Füllrate)
+     Erzeugt am 30.09.2026 09:55 · Grundlage: Excel Datensätze (Füllrate)
      Karten: 4 · Felder: 26
      Neu erzeugen:  python3 tools/sandbox_matrizen.py
      Werte sind Platzhalter, es sind keine echten Datensätze enthalten.
@@ -86,7 +86,7 @@ window.SANDBOX_VIEW =
         "intern": "Stammdaten · Nurse-Bewerbung",
         "internIds": "Stammdaten · K-NA-1+K-NA-2+K-NA-3",
         "kartenId": "stammdaten_talent_new-reg_contact-initiated",
-        "bedingung": "Kontakt-Typ = \"Talent\" und Talent-Phase = «New registration, contact initiated»",
+        "bedingung": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «new_registration», «contact initiated»",
         "info": [
           {
             "k": "Interner Name",
@@ -94,7 +94,7 @@ window.SANDBOX_VIEW =
           },
           {
             "k": "Bedingung",
-            "w": "Kontakt-Typ = \"Talent\" und Talent-Phase = «New registration, contact initiated»"
+            "w": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «new_registration», «contact initiated»"
           }
         ],
         "variante": {
@@ -148,7 +148,7 @@ window.SANDBOX_VIEW =
         "intern": "Einsatzprofil · Nurse-Bewerbung",
         "internIds": "Einsatzprofil · K-NA-1+K-NA-2+K-NA-3",
         "kartenId": "einsatzprofil_talent_new-reg_contact-initiated",
-        "bedingung": "Kontakt-Typ = \"Talent\" und Talent-Phase = «New registration, contact initiated»",
+        "bedingung": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «new_registration», «contact initiated»",
         "info": [
           {
             "k": "Interner Name",
@@ -156,7 +156,7 @@ window.SANDBOX_VIEW =
           },
           {
             "k": "Bedingung",
-            "w": "Kontakt-Typ = \"Talent\" und Talent-Phase = «New registration, contact initiated»"
+            "w": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «new_registration», «contact initiated»"
           }
         ],
         "variante": {
@@ -364,6 +364,36 @@ window.SANDBOX_VIEW =
     "titel": "Record summary",
     "badge": "",
     "karten": [
+      {
+        "typ": "leadStager",
+        "titel": "Lead stage tracker",
+        "sbId": "karte-lead",
+        "tag": "Primary",
+        "felder": [
+          {
+            "label": "",
+            "wert": "Lead Muster - 30.09.26 - WN_CH"
+          },
+          {
+            "label": "Owner",
+            "wert": "A. Muster"
+          },
+          {
+            "label": "Lead type",
+            "wert": "CH Lead"
+          },
+          {
+            "label": "Stage",
+            "wert": "new_registration / contact initiated   (Leads (Temp))"
+          },
+          {
+            "label": "Created on",
+            "wert": "30.09.2026 02:21 GMT+2"
+          }
+        ],
+        "fuellung": 22,
+        "leisteText": "Phase 2 von 9"
+      },
       {
         "typ": "liste",
         "titel": "Companies",

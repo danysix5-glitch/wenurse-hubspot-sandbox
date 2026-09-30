@@ -1,5 +1,5 @@
 /* automatisch erzeugt aus Sandbox-Matrizen.xlsx – nicht von Hand bearbeiten */
-/* Stand: 30.09.2026 09:43 */
+/* Stand: 30.09.2026 09:55 */
 window.SB_SEGMENTE = [
  {
   "id": "K-NA-1",

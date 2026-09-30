@@ -16,7 +16,7 @@
      AUTOMATISCH ERZEUGT aus Sandbox-Matrizen.xlsx – nicht von Hand bearbeiten.
      Segment K-NA-2: Nurse-Bewerbung · Intro-Call
      Objekt: kontakt · Filter: Talent, Talent - Intro-Call
-     Erzeugt am 30.09.2026 09:43 · Grundlage: Excel Datensätze (Füllrate)
+     Erzeugt am 30.09.2026 09:55 · Grundlage: Excel Datensätze (Füllrate)
      Karten: 5 · Felder: 46
      Neu erzeugen:  python3 tools/sandbox_matrizen.py
      Werte sind Platzhalter, es sind keine echten Datensätze enthalten.
@@ -90,7 +90,7 @@ window.SANDBOX_VIEW =
         "intern": "Stammdaten · Nurse-Bewerbung",
         "internIds": "Stammdaten · K-NA-1+K-NA-2+K-NA-3",
         "kartenId": "stammdaten_talent_intro-call_bewerbungs_mundl-Go",
-        "bedingung": "Kontakt-Typ = \"Talent\" und Talent-Phase ist eine von: «Intro-Call», «Bewerbungsgespräch, mündl. GO»",
+        "bedingung": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «intro call», «Bewerbungsgespräch», «Employee mündliches Go»",
         "info": [
           {
             "k": "Interner Name",
@@ -98,7 +98,7 @@ window.SANDBOX_VIEW =
           },
           {
             "k": "Bedingung",
-            "w": "Kontakt-Typ = \"Talent\" und Talent-Phase ist eine von: «Intro-Call», «Bewerbungsgespräch, mündl. GO»"
+            "w": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «intro call», «Bewerbungsgespräch», «Employee mündliches Go»"
           }
         ],
         "variante": {
@@ -173,7 +173,7 @@ window.SANDBOX_VIEW =
         "intern": "Einsatzprofil · Nurse-Bewerbung",
         "internIds": "Einsatzprofil · K-NA-1+K-NA-2+K-NA-3",
         "kartenId": "einsatzprofil_talent_intro_bewerbungs_mundl-Go",
-        "bedingung": "Kontakt-Typ = \"Talent\" und Talent-Phase ist eine von: «Intro-Call», «Bewerbungsgespräch, mündl. GO»",
+        "bedingung": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «intro call», «Bewerbungsgespräch», «Employee mündliches Go»",
         "info": [
           {
             "k": "Interner Name",
@@ -181,7 +181,7 @@ window.SANDBOX_VIEW =
           },
           {
             "k": "Bedingung",
-            "w": "Kontakt-Typ = \"Talent\" und Talent-Phase ist eine von: «Intro-Call», «Bewerbungsgespräch, mündl. GO»"
+            "w": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «intro call», «Bewerbungsgespräch», «Employee mündliches Go»"
           }
         ],
         "variante": {
@@ -321,7 +321,7 @@ window.SANDBOX_VIEW =
         "intern": "Anstellung & Vertrag · Nurse-Bewerbung · Bewerbungsgespräch / mündliches GO + Intro-Call",
         "internIds": "Anstellung & Vertrag · K-NA-2+K-NA-3",
         "kartenId": "anstellung-vertrag_talent_intro_bewerbungs_mundl-Go",
-        "bedingung": "Kontakt-Typ = \"Talent\" und Talent-Phase ist eine von: «Intro-Call», «Bewerbungsgespräch, mündl. GO»",
+        "bedingung": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «intro call», «Bewerbungsgespräch», «Employee mündliches Go»",
         "info": [
           {
             "k": "Interner Name",
@@ -329,7 +329,7 @@ window.SANDBOX_VIEW =
           },
           {
             "k": "Bedingung",
-            "w": "Kontakt-Typ = \"Talent\" und Talent-Phase ist eine von: «Intro-Call», «Bewerbungsgespräch, mündl. GO»"
+            "w": "Kontakt-Typ = \"Talent\" und Lead · Leadphase ist eine von: «intro call», «Bewerbungsgespräch», «Employee mündliches Go»"
           }
         ],
         "variante": null,
@@ -505,6 +505,36 @@ window.SANDBOX_VIEW =
     "titel": "Record summary",
     "badge": "",
     "karten": [
+      {
+        "typ": "leadStager",
+        "titel": "Lead stage tracker",
+        "sbId": "karte-lead",
+        "tag": "Primary",
+        "felder": [
+          {
+            "label": "",
+            "wert": "Lead Muster - 30.09.26 - WN_CH"
+          },
+          {
+            "label": "Owner",
+            "wert": "A. Muster"
+          },
+          {
+            "label": "Lead type",
+            "wert": "CH Lead"
+          },
+          {
+            "label": "Stage",
+            "wert": "intro call   (Leads (Temp))"
+          },
+          {
+            "label": "Created on",
+            "wert": "30.09.2026 02:21 GMT+2"
+          }
+        ],
+        "fuellung": 33,
+        "leisteText": "Phase 3 von 9"
+      },
       {
         "typ": "liste",
         "titel": "Companies",

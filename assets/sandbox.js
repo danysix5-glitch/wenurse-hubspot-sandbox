@@ -33,6 +33,9 @@
   if (PUR) {
     document.body.classList.add('sb-clean', 'sb-marker-aus', 'sb-ohne-puls');
   }
+  /* Objekt-Klasse: steuert u. a. die Breite der linken Spalte (Kontakte breiter,
+     weil dort die Stammdaten und das assoziierte Lead-Objekt stehen). */
+  if (CFG.objektIntern) document.body.classList.add('sb-objekt-' + CFG.objektIntern);
 
   /* ------------------------------------------------------------------ Speicher */
   const SPEICHER_KEY = 'wenurse-hubspot-sandbox:' + (CFG.datei || 'ansicht');
@@ -545,9 +548,9 @@
     fokusSchalter.addEventListener('change', function () { fokusSetzen(fokusSchalter.checked); });
   }
 
-  /* Bedingungen/Angaben unter dem Kartentitel ein- und ausblenden (Standard: an).
-     Merkt sich den Zustand im Browser, damit die Ansicht beim nächsten Öffnen
-     gleich wieder aufgeräumt ist. */
+  /* Bedingungen/Angaben unter dem Kartentitel ein- und ausblenden.
+     Standard: **aus** – die Standard-Ansicht ist aufgeräumt; Taste B zeigt die Angaben
+     (interner Name, Bedingung, Stage-Variante). Der Zustand wird im Browser gemerkt. */
   const bedingungSchalter = document.getElementById('sb-bedingung-schalter');
   const BEDINGUNG_KEY = 'wenurse-sandbox-bedingungen';
   function bedingungenZeigen(an) {
@@ -555,8 +558,8 @@
     if (bedingungSchalter) bedingungSchalter.checked = an;
     try { localStorage.setItem(BEDINGUNG_KEY, an ? 'an' : 'aus'); } catch (e) { /* egal */ }
   }
-  let bedingungenAn = true;
-  try { bedingungenAn = localStorage.getItem(BEDINGUNG_KEY) !== 'aus'; } catch (e) { /* egal */ }
+  let bedingungenAn = false;
+  try { bedingungenAn = localStorage.getItem(BEDINGUNG_KEY) === 'an'; } catch (e) { /* egal */ }
   bedingungenZeigen(bedingungenAn);
   if (bedingungSchalter) {
     bedingungSchalter.addEventListener('change', function () { bedingungenZeigen(bedingungSchalter.checked); });

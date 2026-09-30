@@ -95,7 +95,9 @@ button {
 /* ---------- 3. Shell / Spalten --------------------------------------------- */
 .hs-app {
   display: grid;
-  grid-template-columns: 300px minmax(520px, 1fr) 384px;
+  /* --hs-links wird je Objekt gesetzt (sandbox.css): Kontakte brauchen links mehr Platz,
+     weil dort die Stammdaten, das assoziierte Lead-Objekt und längere Labels stehen. */
+  grid-template-columns: var(--hs-links, 300px) minmax(520px, 1fr) 384px;
   gap: 6px;
   padding: 12px 12px 12px 4px;
   align-items: start;
