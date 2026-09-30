@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unternehmens-Ansicht · WeNurse HubSpot-Sandbox</title>
+<link rel="stylesheet" href="../assets/hubspot.css">
+<link rel="stylesheet" href="../assets/sandbox.css">
+</head>
+<body>
+
+<div class="hs-app" id="hs-app"></div>
+
+<script>
+/* ============================================================================
+   Unternehmens-Ansicht (Institution / Kunde)
+   Beispieldaten – frei änderbar.
+   ============================================================================ */
+window.SANDBOX_VIEW = {
+
+  datei: 'unternehmen-institution',
+  titel: 'Unternehmen – Institution (Kunde)',
+  untertitel: 'Auftragsverhältnis passiver Kunde · Einsatzinformationen',
+  objekt: 'Unternehmen',
+  navAktiv: 'Unternehmen',
+  zurueck: 'Companies',
+
+  /* ---------------------------------------------------------- linke Spalte */
+  identitaet: {
+    name: 'Musterklinik AG',
+    unter: 'Spital · Region Zürich',
+    avatar: { icon: 'firma' },
+    badges: [
+      { text: 'Passiver Kunde', farbe: 'hell' },
+      { text: 'Kanton ZH', farbe: 'hell' }
+    ]
+  },
+  aktionen: ['Note', 'Email', 'Call', 'Task', 'Meeting', 'More'],
+
+  links: {
+    karten: [
+      {
+        typ: 'abschnitt',
+        titel: 'About this company',
+        sbId: 'abschnitt-about',
+        spalten: 1,
+        felder: [
+          { label: 'Company Domain Name', wert: 'musterklinik.example', art: 'link', breit: true },
+          { label: 'Auftragsverhältnis', wert: 'Passiver Kunde', art: 'token', sbId: 'feld-auftragsverhaeltnis' },
+          { label: 'Fachbereich Institution', wert: 'Spital', art: 'token' },
+          { label: 'Phone Number', wert: '+41 44 000 00 00' },
+          { label: 'Kanton', wert: 'ZH' },
+          { label: 'Street Address', wert: 'Musterstrasse 1' },
+          { label: 'Postal Code', wert: '8004' },
+          { label: 'City', wert: 'Zürich' },
+          { label: 'Company owner', wert: 'Daniel Hassemer', art: 'person' },
+          { label: 'Rahmenvereinbarung vorhanden', wert: '', sbId: 'feld-rahmenvertrag' },
+          { label: 'Zahlungsziel (Tage)', wert: '30' }
+        ]
+      },
+      {
+        typ: 'abschnitt',
+        titel: 'Einsatzinformationen',
+        sbId: 'abschnitt-einsatzinfo',
+        spalten: 1,
+        felder: [
+          { label: 'Ansprechperson Einsatz', wert: 'Beatrice Beispiel', art: 'person' },
+          { label: 'E-Mail Ansprechperson Einsatz', wert: 'einsatz@musterklinik.example', art: 'link' },
+          { label: 'Zeit & Treffpunkt erster Arbeitstag', wert: '07:00, Pflegebüro Haus 2', art: 'lang', breit: true },
+          { label: 'Aktive Einsätze', wert: '1' },
+          { label: 'Abgeschlossene Einsätze', wert: '2' }
+        ]
+      }
+    ]
+  },
+
+  /* --------------------------------------------------------- mittlere Spalte */
+  mitte: {
+    tabs: ['Catch-up', 'Overview', 'Activities', 'Intelligence'],
+    aktivTab: 'Activities',
+    subTabs: ['All activities', 'Notes', 'Emails', 'Calls', 'Tasks', 'Meetings'],
+    aktivSubTab: 'All activities',
+    leiste: {
+      suche: true,
+      rechts: 'Collapse all',
+      chips: [
+        { text: 'Activity (16/29)', x: true },
+        { text: 'All time', pfeil: true },
+        { text: 'Activity assigned to', pfeil: true },
+        { text: 'HubSpot team', pfeil: true },
+        { text: 'Clear all', klar: true }
+      ]
+    },
+    karten: [
+      {
+        typ: 'feed',
+        sbId: 'feed',
+        gruppen: [
+          {
+            titel: 'September 2023',
+            eintraege: [
+              {
+                typ: 'notiz',
+                klasse: 'hs-activity--pinned',
+                kopf: [{ t: 'Note by' }, { t: 'Daniel Hassemer', stark: true }],
+                zeit: '22. Sep. 2023 15:44',
+                koerper: ['Wichtige Informationen bezüglich Deals:'],
+                fuss: [{ text: 'Angepinnt' }]
+              }
+            ]
+          },
+          {
+            titel: 'Januar 2024',
+            eintraege: [
+              {
+                typ: 'notiz',
+                kopf: [{ t: 'Note by' }, { t: 'Daniel Hassemer (Deactivated/Removed)', stark: true }],
+                zeit: '31. Jan. 2024 09:02',
+                koerper: ['Tel. mit Fr. Beispiel: Bedarf für zwei weitere Einsätze ab März, Entscheid nach Budgetrunde.']
+              }
+            ]
+          },
+          {
+            titel: 'Dezember 2023',
+            eintraege: [
+              {
+                typ: 'incoming',
+                kopf: [
+                  { t: 'Incoming email – AW: [EXTERN] Einsatzplanung from' },
+                  { t: 'Beatrice Beispiel', stark: true }
+                ],
+                zeit: '19. Dez. 2023 09:57',
+                koerper: ['Liebe Frau Muster', 'Herzlichen Dank, dann ist es wie es ist. Geht ja in den Bereich.']
+              },
+              {
+                typ: 'email',
+                kopf: [
+                  { t: 'Email – AW: [EXTERN] Einsatzplanung from' },
+                  { t: 'Daniel Hassemer', stark: true }
+                ],
+                zeit: '19. Dez. 2023 09:00',
+                statusPunkt: 'gruen',
+                koerper: ['Liebe Frau Beispiel', 'Herzlichen Dank für das zusätzliche planen von Frau Heiduschke.'],
+                fuss: [{ punkt: 'gruen', label: 'Opens', wert: '11' }, { label: 'Clicks', wert: '0' }]
+              },
+              {
+                typ: 'email',
+                offen: false,
+                kopf: [
+                  { t: 'Email – AW: [EXTERN] Einsatzplanung from' },
+                  { t: 'Beatrice Beispiel', stark: true }
+                ],
+                zeit: '19. Dez. 2023 08:58'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  /* ---------------------------------------------------------- rechte Spalte */
+  rechts: {
+    titel: 'Record summary',
+    badge: '',
+    karten: [
+      {
+        typ: 'liste',
+        titel: 'Contacts',
+        anzahl: 1,
+        sbId: 'karte-kontakte',
+        suchen: true,
+        add: true,
+        eintraege: [
+          {
+            icon: 'person',
+            titel: 'Beatrice Beispiel',
+            zeilen: [
+              ['Email:', 'b.beispiel@musterklinik.example'],
+              ['Phone Number:', '+41 79 000 00 01'],
+              ['Job title:', 'Abteilungsleitung Pflege, Universitätsspital-Betrieb']
+            ],
+            labels: ['Bereitschaftsle…', 'Contact with P…', 'Pflegedienstl…']
+          }
+        ],
+        alleLink: 'View all associated Contacts'
+      },
+      {
+        typ: 'liste',
+        titel: 'Deals',
+        anzahl: 2,
+        sbId: 'karte-deals',
+        suchen: true,
+        add: true,
+        eintraege: [
+          {
+            icon: 'deal',
+            titel: 'Einsatz 23-0118 · Park A',
+            dealKarte: {
+              stage: 'Archiv',
+              zeilen: [
+                ['Close Date:', '15. Februar 2024'],
+                ['Startdatum Deal:', '01.01.2024'],
+                ['Enddatum Deal:', '31.01.2024'],
+                ['Dauer:', '1 Monat']
+              ],
+              fuss: 'Deal with Primary Company'
+            }
+          },
+          {
+            icon: 'deal',
+            titel: 'Einsatz 23-0094 · Haus 2',
+            dealKarte: {
+              stage: 'Archiv',
+              zeilen: [
+                ['Close Date:', '16. Januar 2024'],
+                ['Startdatum Deal:', '01.11.2023'],
+                ['Enddatum Deal:', '31.12.2023'],
+                ['Dauer:', '2 Monate']
+              ],
+              fuss: 'Deal with Primary Company'
+            }
+          }
+        ],
+        alleLink: 'View all associated Deals'
+      },
+      { typ: 'anhaenge', titel: 'Attachments', sbId: 'karte-anhaenge' }
+    ]
+  },
+
+  /* ------------------------------------------------- Änderungsvorschläge ---- */
+  aenderungen: [
+    {
+      nr: 1,
+      titel: 'Auftragsverhältnis in den Kopfbereich',
+      ziel: 'feld-auftragsverhaeltnis',
+      text: '«Passiver Kunde» ist für Sales die wichtigste Kennzahl dieser Firma. Vorschlag: als Badge oben in der Record-Karte, nicht als Feld im Abschnitt.'
+    },
+    {
+      nr: 2,
+      titel: 'Abschnitt «Einsatzinformationen» zusammenlegen',
+      ziel: 'abschnitt-einsatzinfo',
+      text: 'Der Abschnitt enthält nur fünf Felder und wird pro Firma gebraucht. Vorschlag: als Unterabschnitt von «About this company» führen, damit die linke Spalte kürzer wird.'
+    },
+    {
+      nr: 3,
+      titel: '«Rahmenvereinbarung vorhanden» klarer',
+      ziel: 'feld-rahmenvertrag',
+      text: 'Heute leer und dadurch missverständlich. Vorschlag: Auswahl Ja/Nein mit Zusatzfeld «Gültig bis».'
+    },
+    {
+      nr: 4,
+      titel: 'Archiv-Deals in der Deal-Karte ausblenden',
+      ziel: 'karte-deals',
+      text: 'Standardfilter «nicht archiviert». Archivierte Deals nur über «View all associated Deals» anzeigen – sonst sieht man auf einen Blick keine aktiven Einsätze.'
+    }
+  ]
+};
+</script>
+
+<script src="../assets/hubspot.js"></script>
+<script src="../data/segmente.js"></script>
+<script src="../assets/sandbox.js"></script>
+</body>
+</html>

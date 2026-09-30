@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HubSpot-Ansichten-Sandbox · WeNurse</title>
+<link rel="stylesheet" href="assets/hubspot.css">
+<style>
+  .start { max-width: 1080px; margin: 0 auto; padding: 32px 20px 64px; }
+  .start__kopf h1 { font-size: 28px; margin: 0 0 6px; }
+  .start__kopf p { color: var(--hs-text-2); margin: 0 0 4px; }
+  .start__marke {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 600; letter-spacing: .4px;
+    text-transform: uppercase; color: var(--hs-orange-600); margin-bottom: 10px;
+  }
+  .start__marke span.punkt {
+    width: 9px; height: 9px; border-radius: 50%; background: var(--hs-orange);
+  }
+  h2 { font-size: 17px; margin: 36px 0 12px; }
+  .start__lead { color: var(--hs-text-2); font-size: 13.5px; margin: -4px 0 14px; max-width: 76ch; }
+  .start__fuss { color: var(--hs-text-2); font-size: 12.5px; margin: 10px 0 0; }
+  .raster { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .kachel {
+    display: block; text-decoration: none; color: inherit;
+    background: #fff; border: 1px solid var(--hs-border);
+    border-radius: var(--hs-radius); box-shadow: var(--hs-shadow);
+    padding: 16px 18px; transition: box-shadow .15s ease, transform .15s ease;
+  }
+  .kachel:hover { box-shadow: var(--hs-shadow-hover); transform: translateY(-1px); text-decoration: none; }
+  .kachel__typ {
+    font-size: 11px; text-transform: uppercase; letter-spacing: .5px;
+    color: var(--hs-text-3); margin-bottom: 6px;
+  }
+  .kachel__titel { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
+  .kachel__text { font-size: 13px; color: var(--hs-text-2); margin: 0; }
+  .kachel__meta { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+  ol.schritte { margin: 0; padding-left: 20px; color: var(--hs-text-2); }
+  ol.schritte li { margin-bottom: 6px; }
+  code {
+    background: var(--hs-token-bg); border-radius: 4px; padding: 1px 5px;
+    font-size: 12.5px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--hs-border-3); }
+  th { color: var(--hs-text-2); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .3px; }
+  .hinweis {
+    background: #fffbf0; border: 1px solid #f0e2b4; border-radius: var(--hs-radius);
+    padding: 12px 16px; font-size: 13px; color: #6b5200;
+  }
+</style>
+</head>
+<body>
+
+<div class="start">
+
+  <div class="start__kopf">
+    <div class="start__marke"><span class="punkt"></span>WeNurse · HubSpot-Sandbox</div>
+    <h1>Vorschau-Umgebung für HubSpot-Ansichten</h1>
+    <p>Nachbau der Kontakt-, Unternehmens- und Deal-Ansicht inklusive rechter Vorschau-Spalte (Record summary).</p>
+    <p>Zweck: Änderungen an Feldern, Gruppierungen und Vorschau-Karten zuerst hier zeigen und abnehmen lassen – erst danach in HubSpot umsetzen.</p>
+  </div>
+
+  <h2>Datengrundlage: Sandbox-Matrizen.xlsx</h2>
+  <p class="start__lead">
+    Hier steuert eine Excel-Datei, welches Feld in welcher Ansicht in welcher Karte erscheint.
+    Die Matrix hat <b>eine Zeile pro Feld</b> und <b>eine Spalte pro Segment</b> – in die Zelle kommt
+    der Kartenname, leer bedeutet «in dieser Ansicht nicht zeigen». Feldtypen, Auswahlwerte und
+    Pipelines kommen weiterhin live aus HubSpot.
+  </p>
+  <table>
+    <tr><th style="width:180px">Blatt</th><th>Inhalt</th></tr>
+    <tr><td><code>Segmente</code></td><td>Eine Zeile pro Ansicht: Objekt + Kontakt-Typ + Phase/Stage, Spalte «Aktiv» = ja/nein</td></tr>
+    <tr><td><code>Karten</code></td><td>Karten-Katalog je Objekt: Name, Reihenfolge, ob zugeklappt</td></tr>
+    <tr><td><code>Matrix</code></td><td>Feld × Segment → Kartenname (das Herzstück)</td></tr>
+    <tr><td><code>Feldkatalog</code></td><td>Alle Eigenschaften mit internem Namen, Typ und Auswahlwerten (nur Nachschlagen)</td></tr>
+    <tr><td><code>Anleitung</code></td><td>Kurzanleitung direkt in der Datei</td></tr>
+  </table>
+  <div class="raster" style="margin-top:14px">
+    <a class="kachel" href="views/matrix-uebersicht.html">
+      <div class="kachel__typ">Aus der Matrix erzeugt</div>
+      <h3 class="kachel__titel">11 Ansichten – Übersicht öffnen</h3>
+      <p class="kachel__text">Kontakt nach Typ und Recruiting-Phase, Unternehmen, Deal nach
+        Pipeline-Stage. Jede Ansicht trägt ihre Segment-ID in der Sandbox-Leiste.</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">K-NA-1 … K-FE-1</span>
+        <span class="hs-pill hs-pill--hell">U-1</span>
+        <span class="hs-pill hs-pill--hell">D-1 … D-4</span></div>
+    </a>
+  </div>
+  <p class="start__fuss">
+    Datei auffrischen (behält Bearbeitungen): <code>python3 tools/sandbox_matrizen.py --excel-neu</code> ·
+    nach dem Bearbeiten: <code>python3 tools/sandbox_matrizen.py</code>
+  </p>
+
+  <h2>Kontakt – Kartenaufteilung (aus der Datensatz-Anpassung)</h2>
+  <p class="start__lead">
+    Die 11 Karten, wie sie in HubSpot für Kontakte zusammengestellt sind: <b>Stammdaten</b>,
+    <b>Einsatzprofil</b>, <b>Verfügbarkeit</b>, <b>Einsatz &amp; Verfügbarkeit</b>, <b>Buchhaltung</b>,
+    <b>Personaladministration</b>, <b>Backoffice Profil</b>, <b>Einsatzprofil DE</b>,
+    <b>Profil &amp; Stammdaten</b>, <b>Lead-Management</b> und <b>Investment</b>. Alle Felder sind über
+    den Anzeigenamen zu den echten HubSpot-Eigenschaften aufgelöst (100 von 101).
+  </p>
+  <div class="raster">
+    <a class="kachel" href="views/kontakt-karten.html">
+      <div class="kachel__typ">Kontakt · generisch</div>
+      <h3 class="kachel__titel">Alle Karten auf einen Blick</h3>
+      <p class="kachel__text">Eine Karte = eine Gruppe. Die ersten zwei sind offen, die übrigen
+        zugeklappt – Knopf «Karten» in der Sandbox-Leiste klappt alle auf. Werte sind Platzhalter.</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">11 Karten</span>
+        <span class="hs-pill hs-pill--hell">100 Felder</span>
+        <span class="hs-pill hs-pill--hell">5 Vorschläge</span></div>
+    </a>
+  </div>
+  <p class="start__fuss">
+    Karten ändern: <code>data/kontakt-karten.json</code> bearbeiten, dann
+    <code>python3 tools/hubspot-kontakt-karten.py</code>
+  </p>
+
+  <h2>Ist-Zustand – Felder direkt aus HubSpot gelesen</h2>
+  <p class="start__lead">
+    Diese drei Ansichten werden aus dem Portal erzeugt. Feldnamen, Beschriftungen, Gruppen, Auswahlwerte und die
+    Reihenfolge der Felder stammen aus HubSpot (Portal 26786204); die Werte sind Platzhalter. Jede Datei trägt oben
+    im Quelltext, wann und mit welcher Auswahl sie erzeugt wurde.
+  </p>
+  <div class="raster">
+    <a class="kachel" href="views/hubspot-kontakt.html">
+      <div class="kachel__typ">Kontakt · aus HubSpot</div>
+      <h3 class="kachel__titel">Feldkatalog Kontakt</h3>
+      <p class="kachel__text">34 Felder in 7 Abschnitten, u. a. AHV, Anstellung Einsatz, Diplom, Fachbereich,
+        Kontakt-Typ, Eintrittsdatum – gruppiert wie im Portal.</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">585 Eigenschaften im Portal</span></div>
+    </a>
+    <a class="kachel" href="views/hubspot-unternehmen.html">
+      <div class="kachel__typ">Unternehmen · aus HubSpot</div>
+      <h3 class="kachel__titel">Feldkatalog Unternehmen</h3>
+      <p class="kachel__text">22 Felder in 3 Abschnitten: Auftragsverhältnis, Fachbereich Institution, Kanton,
+        Rahmenvereinbarung, Dienstzeiten, Kostenstelle und weitere.</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">277 Eigenschaften im Portal</span></div>
+    </a>
+    <a class="kachel" href="views/hubspot-deal.html">
+      <div class="kachel__typ">Deal · aus HubSpot</div>
+      <h3 class="kachel__titel">Feldkatalog Deal</h3>
+      <p class="kachel__text">43 Felder in 5 Abschnitten plus die echte Pipeline «Institution» mit ihren 7 Stages
+        im Stage-Tracker.</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">376 Eigenschaften im Portal</span></div>
+    </a>
+  </div>
+  <p class="start__fuss">
+    Neu erzeugen: <code>python3 tools/hubspot-eigenschaften.py</code> · andere Auswahl:
+    <code>--alles</code> (alle Felder), <code>--mit-fuellrate</code> (Füllrate in %) · Details im README.
+  </p>
+
+  <h2>Vorschläge je Kontakt-Typ (Nurse-Bewerbung / Institution / Employee)</h2>
+  <p class="start__lead">
+    Dieselben Kontaktfelder, aber auf den Kontakt-Typ zugeschnitten: Ausgewertet wurde, in wie vielen
+    Kontakten <em>dieses</em> Typs ein Feld tatsächlich gefüllt ist. Die Zahl nach jeder Beschriftung ist genau
+    diese Quote. Felder, die im Segment nie Daten haben, stehen als Vorschlagsliste am Ende – die sind zum
+    Streichen gedacht. Jede Ansicht bringt ihre Begründung als Änderungsliste mit (Knopf <b>Abnahme</b>).
+  </p>
+  <div class="raster">
+    <a class="kachel" href="views/vorschlag-kontakt-nurse-bewerbung.html">
+      <div class="kachel__typ">Vorschlag · Kontakt-Typ Nurse-Bewerbung</div>
+      <h3 class="kachel__titel">Bewerbung: 29 von 164 Feldern genutzt</h3>
+      <p class="kachel__text">Kanton, Diplom, Dienste-Bereitschaft, Herkunft (UTM) und Segmentierung.
+        32 Felder (AHV, IBAN, Nationalität …) sind heute leer, weil sie erst beim Personalteil kommen.</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">1'209 Kontakte</span>
+        <span class="hs-pill hs-pill--hell">78 Felder ohne Daten</span></div>
+    </a>
+    <a class="kachel" href="views/vorschlag-kontakt-institution.html">
+      <div class="kachel__typ">Vorschlag · Kontakt-Typ Institution</div>
+      <h3 class="kachel__titel">Institution: nur 9 Felder in Gebrauch</h3>
+      <p class="kachel__text">Anrede, Ansprache, Kanton, Anzahl Betten, Job Kategorie – der Rest wird über
+        die verknüpfte Firma geführt. 144 der 164 Felder haben in diesem Segment keine Daten.</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">1'096 Kontakte</span>
+        <span class="hs-pill hs-pill--hell">schärfster Schnitt</span></div>
+    </a>
+    <a class="kachel" href="views/vorschlag-kontakt-employee.html">
+      <div class="kachel__typ">Vorschlag · Kontakt-Typ Employee</div>
+      <h3 class="kachel__titel">Employee: 93 Felder, 59 davon typ-spezifisch</h3>
+      <p class="kachel__text">Personal- und Vertragsadministration (AHV, IBAN, Zulagen, Notfallkontakt)
+        plus Qualifikation. Der grösste Block – hier rechtfertigt sich die breite Ansicht.</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">49 Kontakte</span>
+        <span class="hs-pill hs-pill--hell">alle geprüft</span></div>
+    </a>
+  </div>
+  <p class="start__fuss">
+    Neu erzeugen: <code>python3 tools/hubspot-kontakt-typen.py</code> · weitere Typen, z. B.
+    <code>--typ "Backoffice MA=Backoffice MA"</code> · Analyse in <code>data/kontakt-typen.json</code>.
+  </p>
+
+  <h2>Vorschläge mit Abnahme-Workflow (Beispiele)</h2>
+  <p class="start__lead">
+    Dieselben drei Ansichten, aber mit erfundenen Werten und je 4–6 Änderungsvorschlägen als Beispiele,
+    wie eine Abnahme mit dem Backoffice abläuft.
+  </p>
+  <div class="raster">
+    <a class="kachel" href="views/kontakt-bewerbungsprofil.html">
+      <div class="kachel__typ">Kontakt</div>
+      <h3 class="kachel__titel">Bewerbungsprofil (Lead)</h3>
+      <p class="kachel__text">Record-Karte links, Aktivitäten-Feed mit E-Mails und Anrufen in der Mitte, Lead Score und Lead-Stager in der Vorschau.</p>
+      <div class="kachel__meta">
+        <span class="hs-pill hs-pill--hell">6 Änderungsvorschläge</span>
+        <span class="hs-pill hs-pill--hell">Feed</span>
+      </div>
+    </a>
+    <a class="kachel" href="views/unternehmen-institution.html">
+      <div class="kachel__typ">Unternehmen</div>
+      <h3 class="kachel__titel">Institution (Kunde)</h3>
+      <p class="kachel__text">About this company und Einsatzinformationen links, Aktivitäten-Historie mit angepinnter Notiz, verknüpfte Kontakte und Archiv-Deals rechts.</p>
+      <div class="kachel__meta">
+        <span class="hs-pill hs-pill--hell">4 Änderungsvorschläge</span>
+        <span class="hs-pill hs-pill--hell">Verknüpfungen</span>
+      </div>
+    </a>
+    <a class="kachel" href="views/deal-einsatz.html">
+      <div class="kachel__typ">Deal</div>
+      <h3 class="kachel__titel">Einsatz (Verleih)</h3>
+      <p class="kachel__text">Einsatz-Kern mit Kategorie, Daten und Pensum, Stage-Tracker mit Dauer, Nurse-Details in der Mitte, Firma und Kontakte in der Vorschau.</p>
+      <div class="kachel__meta">
+        <span class="hs-pill hs-pill--hell">5 Änderungsvorschläge</span>
+        <span class="hs-pill hs-pill--hell">Tracker</span>
+      </div>
+    </a>
+    <a class="kachel" href="views/_vorlage-neue-ansicht.html">
+      <div class="kachel__typ">Vorlage</div>
+      <h3 class="kachel__titel">Neue Ansicht bauen</h3>
+      <p class="kachel__text">Leere Vorlage mit allen Kartentypen als Kopiervorlage. Diese Datei kopieren und die Werte ersetzen.</p>
+      <div class="kachel__meta">
+        <span class="hs-pill hs-pill--hell">Kopiervorlagen im Kommentar</span>
+      </div>
+    </a>
+  </div>
+
+  <h2>Eine neue Vorschau in drei Schritten</h2>
+  <ol class="schritte">
+    <li><code>views/_vorlage-neue-ansicht.html</code> kopieren → z. B. <code>views/deal-neue-felder.html</code></li>
+    <li>Im Block <code>window.SANDBOX_VIEW</code> die Felder, Karten und <code>aenderungen</code> anpassen.</li>
+    <li>Datei doppelklicken. Für die Abnahme: Knopf <b>Abnahme</b> öffnen, Status setzen, dann <b>JSON speichern</b> oder <b>Text kopieren</b>.</li>
+  </ol>
+
+  <h2>Abnahme-Ablauf mit dem Backoffice</h2>
+  <table>
+    <tr><th style="width:150px">Element</th><th>Was es macht</th></tr>
+    <tr><td>Oranger Marker mit Zahl</td><td>Sitzt am betroffenen Feld, Abschnitt oder an der Karte. Klick öffnet die passende Zeile in der Änderungsliste.</td></tr>
+    <tr><td>Knopf «Abnahme»</td><td>Öffnet die Liste aller Vorschläge. Pro Vorschlag: ✓ passt so / ✎ Änderung nötig / ✗ streichen / ○ offen, plus Kommentarfeld.</td></tr>
+    <tr><td>JSON speichern</td><td>Erzeugt <code>abnahme-&lt;ansicht&gt;.json</code> mit allen Rückmeldungen – ideal, um sie weiterzuverarbeiten.</td></tr>
+    <tr><td>Zusammenfassung kopieren → «Text kopieren»</td><td>Text für E-Mail oder Teams-Nachricht, mit Status und Kommentaren.</td></tr>
+    <tr><td>Screenshot-Modus</td><td>Blendet die Sandbox-Leiste aus, damit die Ansicht wie echtes HubSpot aussieht.</td></tr>
+    <tr><td>PDF</td><td>Druckansicht ohne Sandbox-Elemente, für Ablage oder Versand.</td></tr>
+  </table>
+
+  <h2>Tastenkürzel</h2>
+  <table>
+    <tr><th style="width:90px">Taste</th><th>Wirkung</th></tr>
+    <tr><td><code>C</code></td><td>Sandbox-Leiste ein-/ausblenden (Screenshot-Modus)</td></tr>
+    <tr><td><code>M</code></td><td>Änderungs-Marker ein-/ausblenden</td></tr>
+    <tr><td><code>D</code></td><td>Änderungsliste öffnen/schliessen</td></tr>
+    <tr><td><code>Esc</code></td><td>Änderungsliste schliessen</td></tr>
+  </table>
+
+  <h2>Hinweise</h2>
+  <div class="hinweis">
+    <b>Hinweis:</b> Alle Personen, Firmen und Werte in dieser Umgebung sind <b>fiktive Beispieldaten</b>.
+    Die Ansichten sind statisch – Schaltflächen wie «Note» oder «Email» lösen bewusst nichts aus, damit nichts versehentlich in HubSpot geschrieben wird.
+    Rückmeldungen aus dem Backoffice werden lokal im Browser (localStorage) gehalten und sind nur in der eigenen Datei sichtbar; zum Weitergeben bitte den JSON-Export verwenden.
+  </div>
+
+</div>
+</body>
+</html>

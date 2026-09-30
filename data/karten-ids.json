@@ -1,0 +1,144 @@
+{
+  "_hinweis": "Interner Kartenname je Karte × Ansicht (so wird die Karte in HubSpot angelegt). Gepflegt über die Arbeitsliste «Karten-Namen.xlsx» (Spalte «neuer interner Kartenname») mit python3 tools/karten_uebernehmen.py.",
+  "karten": {
+    "kontakt": {
+      "Stammdaten": {
+        "K-EM-1": "stammdaten_employee__former-employee",
+        "K-FE-1": "stammdaten_employee__former-employee",
+        "K-NA-2": "stammdaten_talent_intro-call_bewerbungs_mundl-Go",
+        "K-NA-3": "stammdaten_talent_intro-call_bewerbungs_mundl-Go",
+        "K-IN-1": "stammdaten_institution",
+        "K-NA-1": "stammdaten_talent_new-reg_contact-initiated"
+      },
+      "Anstellung & Vertrag": {
+        "K-FE-1": "anstellung-vertrag_former-employee",
+        "K-EM-1": "anstellung-vertrag_employee",
+        "K-NA-2": "anstellung-vertrag_talent_intro_bewerbungs_mundl-Go",
+        "K-NA-3": "anstellung-vertrag_talent_intro_bewerbungs_mundl-Go"
+      },
+      "Einsatzprofil": {
+        "K-NA-2": "einsatzprofil_talent_intro_bewerbungs_mundl-Go",
+        "K-NA-3": "einsatzprofil_talent_intro_bewerbungs_mundl-Go",
+        "K-EM-1": "einsatzprofil_employee_former-employee",
+        "K-FE-1": "einsatzprofil_employee_former-employee",
+        "K-NA-1": "einsatzprofil_talent_new-reg_contact-initiated"
+      },
+      "Lead-Management": {
+        "K-EM-1": "lead-management_employee_former-employee",
+        "K-FE-1": "lead-management_employee_former-employee",
+        "K-IN-1": "lead-management_institution_talent",
+        "K-NA-1": "lead-management_institution_talent",
+        "K-NA-2": "lead-management_institution_talent",
+        "K-NA-3": "lead-management_institution_talent"
+      },
+      "Backoffice Profil": {
+        "K-EM-1": "backoffice-profil_employee_former-employee",
+        "K-FE-1": "backoffice-profil_employee_former-employee"
+      },
+      "Buchhaltung": {
+        "K-EM-1": "buchhaltung_employee_former-employee",
+        "K-FE-1": "buchhaltung_employee_former-employee"
+      },
+      "Unternehmens-Informationen": {
+        "K-EM-1": "unternehmens-informationen_employee_former-employee_institution_talent",
+        "K-FE-1": "unternehmens-informationen_employee_former-employee_institution_talent",
+        "K-IN-1": "unternehmens-informationen_employee_former-employee_institution_talent",
+        "K-NA-1": "unternehmens-informationen_employee_former-employee_institution_talent",
+        "K-NA-2": "unternehmens-informationen_employee_former-employee_institution_talent",
+        "K-NA-3": "unternehmens-informationen_employee_former-employee_institution_talent"
+      },
+      "Verfügbarkeit": {
+        "K-EM-1": "verfugbarkeit_employee"
+      }
+    },
+    "unternehmen": {
+      "Einsatzinformationen": {
+        "U-1": "einsatzinformationen"
+      },
+      "HSG": {
+        "U-1": "hsg"
+      },
+      "Institution Stammdaten": {
+        "U-1": "institution-stammdaten"
+      },
+      "Investoren Profil": {
+        "U-1": "investoren-profil"
+      },
+      "Vertrag": {
+        "U-1": "vertrag"
+      }
+    },
+    "deal": {
+      "Einsatz-Kern": {
+        "D-2": "einsatz-kern_verleih_mundl-Go_nicht-gestartet_einsatz-lauft",
+        "D-3": "einsatz-kern_verleih_mundl-Go_nicht-gestartet_einsatz-lauft",
+        "D-4": "einsatz-kern_verleih_mundl-Go_nicht-gestartet_einsatz-lauft",
+        "D-1": "einsatz-kern_verleih_offen",
+        "D-V-2": "einsatz-kern_vermittlung_matching",
+        "D-V-1": "einsatz-kern_vermittlung_offen",
+        "D-C-1": "einsatz-kern_consulting",
+        "D-C-2": "einsatz-kern_consulting"
+      },
+      "Vertrag": {
+        "D-2": "vertrag_verleih",
+        "D-3": "vertrag_verleih",
+        "D-4": "vertrag_verleih",
+        "D-C-2": "vertrag_consulting_vermittlung",
+        "D-V-2": "vertrag_consulting_vermittlung"
+      },
+      "Forecast": {
+        "D-1": "forecast",
+        "D-2": "forecast",
+        "D-3": "forecast",
+        "D-4": "forecast",
+        "D-C-1": "forecast",
+        "D-C-2": "forecast",
+        "D-V-1": "forecast",
+        "D-V-2": "forecast"
+      },
+      "Monatsabschluss": {
+        "D-3": "monatsabschluss_verleih",
+        "D-4": "monatsabschluss_verleih"
+      },
+      "Konditionen": {
+        "D-1": "konditionen_verleih",
+        "D-2": "konditionen_verleih",
+        "D-3": "konditionen_verleih",
+        "D-4": "konditionen_verleih",
+        "D-V-1": "konditionen_vermittlung",
+        "D-V-2": "konditionen_vermittlung"
+      },
+      "Konditionen Consulting": {
+        "D-C-1": "konditionen_consulting",
+        "D-C-2": "konditionen_consulting"
+      },
+      "Einsatzinformationen Institution": {
+        "D-2": "einsatzinformationen-institution_verleih_mundl-Go_nicht-gestartet_einsatz-lauft",
+        "D-3": "einsatzinformationen-institution_verleih_mundl-Go_nicht-gestartet_einsatz-lauft",
+        "D-4": "einsatzinformationen-institution_verleih_mundl-Go_nicht-gestartet_einsatz-lauft",
+        "D-1": "einsatzinformationen-institution_verleih_offen",
+        "D-V-1": "einsatzinformationen-institution_vermittlung",
+        "D-V-2": "einsatzinformationen-institution_vermittlung",
+        "D-C-1": "einsatzinformationen_consulting",
+        "D-C-2": "einsatzinformationen_consulting"
+      },
+      "Einsatzinformationen Nurse": {
+        "D-2": "einsatzinformationen-nurse_verleih",
+        "D-3": "einsatzinformationen-nurse_verleih",
+        "D-4": "einsatzinformationen-nurse_verleih",
+        "D-V-2": "einsatzinformationen-nurse_vermittlung",
+        "D-C-2": "einsatzinformationen-nurse_consulting"
+      },
+      "Abrechnung": {
+        "D-2": "abrechnung_verleih_vermittlung",
+        "D-3": "abrechnung_verleih_vermittlung",
+        "D-4": "abrechnung_verleih_vermittlung",
+        "D-V-2": "abrechnung_verleih_vermittlung"
+      },
+      "Abrechnung Consulting": {
+        "D-C-1": "abrechnung_consulting",
+        "D-C-2": "abrechnung_consulting"
+      }
+    }
+  }
+}

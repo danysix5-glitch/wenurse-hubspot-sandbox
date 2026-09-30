@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Matrix-Ansichten · WeNurse HubSpot-Sandbox</title>
+<link rel="stylesheet" href="../assets/hubspot.css">
+<style>
+  .start { max-width: 1080px; margin: 0 auto; padding: 32px 20px 64px; }
+  .start h1 { font-size: 26px; margin: 0 0 6px; }
+  .start p { color: var(--hs-text-2); }
+  h2 { font-size: 17px; margin: 32px 0 12px; }
+  .raster { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .kachel { display: block; text-decoration: none; color: inherit; background: #fff;
+             border: 1px solid var(--hs-border); border-radius: var(--hs-border-radius, 8px);
+             box-shadow: var(--hs-shadow); padding: 16px 18px; }
+  .kachel:hover { box-shadow: var(--hs-shadow-hover); text-decoration: none; }
+  .kachel__typ { font-size: 11px; text-transform: uppercase; letter-spacing: .5px;
+                  color: var(--hs-text-3); margin-bottom: 6px; }
+  .kachel__titel { font-size: 16px; font-weight: 600; margin: 0 0 6px; }
+  .kachel__text { font-size: 13px; color: var(--hs-text-2); margin: 0; }
+  .kachel__meta { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .kachel--vergleich { border-left: 3px solid var(--hs-teal, #1f7a76); }
+</style>
+</head>
+<body>
+<div class="start">
+  <h1>Ansichten aus der Excel-Matrix</h1>
+  <p>Diese Seiten entstehen aus <code>Sandbox-Matrizen.xlsx</code> (Blätter «Segmente», «Karten»,
+     «Matrix»). Stand: 30.09.2026 09:43 · Portal 26786204.</p>
+  <p><strong>Freigabe-Ansicht:</strong> alle Kacheln öffnen mit <code>?pur=1</code> – dann
+     erscheinen nur die Karten (keine Bedienelemente, nichts abgedunkelt), und am Seitenende
+     führen Links zur nächsten Ansicht, zum Gruppenvergleich und hierher zurück.
+     Diesen Link können Sie direkt weitergeben.</p>
+  <p>Bearbeiten: Excel öffnen, Matrix anpassen, dann
+     <code>python3 tools/sandbox_matrizen.py</code> ausführen.</p>
+  <h2>Vergleich der Obergruppen</h2>
+  <div class="raster">
+    <a class="kachel kachel--vergleich" href="vergleich-nurse-bewerbung.html?pur=1">
+      <div class="kachel__typ">Vergleich · kontakt</div>
+      <h3 class="kachel__titel">Nurse-Bewerbung</h3>
+      <p class="kachel__text">K-NA-1 · K-NA-2 · K-NA-3</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">3 Segmente</span>
+        <span class="hs-pill hs-pill--hell">118 Felder</span></div>
+    </a>
+    <a class="kachel kachel--vergleich" href="vergleich-mitarbeitende.html?pur=1">
+      <div class="kachel__typ">Vergleich · kontakt</div>
+      <h3 class="kachel__titel">Mitarbeitende</h3>
+      <p class="kachel__text">K-EM-1 · K-FE-1</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">2 Segmente</span>
+        <span class="hs-pill hs-pill--hell">165 Felder</span></div>
+    </a>
+    <a class="kachel kachel--vergleich" href="vergleich-verleih.html?pur=1">
+      <div class="kachel__typ">Vergleich · deal</div>
+      <h3 class="kachel__titel">Verleih</h3>
+      <p class="kachel__text">D-1 · D-2 · D-3 · D-4</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">4 Segmente</span>
+        <span class="hs-pill hs-pill--hell">256 Felder</span></div>
+    </a>
+    <a class="kachel kachel--vergleich" href="vergleich-vermittlung.html?pur=1">
+      <div class="kachel__typ">Vergleich · deal</div>
+      <h3 class="kachel__titel">Vermittlung</h3>
+      <p class="kachel__text">D-V-1 · D-V-2</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">2 Segmente</span>
+        <span class="hs-pill hs-pill--hell">91 Felder</span></div>
+    </a>
+    <a class="kachel kachel--vergleich" href="vergleich-consulting.html?pur=1">
+      <div class="kachel__typ">Vergleich · deal</div>
+      <h3 class="kachel__titel">Consulting</h3>
+      <p class="kachel__text">D-C-1 · D-C-2</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">2 Segmente</span>
+        <span class="hs-pill hs-pill--hell">61 Felder</span></div>
+    </a>
+  </div>
+  <h2>Kontakt</h2>
+  <div class="raster">
+    <a class="kachel" href="matrix-k-na-1.html?pur=1">
+      <div class="kachel__typ">K-NA-1</div>
+      <h3 class="kachel__titel">Nurse-Bewerbung · New registration & contact initiated</h3>
+      <p class="kachel__text">Kontakt · Nurse-Bewerbung · New registration & contact initiated · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">4 Karten</span>
+        <span class="hs-pill hs-pill--hell">26 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-k-na-2.html?pur=1">
+      <div class="kachel__typ">K-NA-2</div>
+      <h3 class="kachel__titel">Nurse-Bewerbung · Intro-Call</h3>
+      <p class="kachel__text">Kontakt · Nurse-Bewerbung · Intro-Call · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">5 Karten</span>
+        <span class="hs-pill hs-pill--hell">46 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-k-na-3.html?pur=1">
+      <div class="kachel__typ">K-NA-3</div>
+      <h3 class="kachel__titel">Nurse-Bewerbung · Bewerbungsgespräch / mündliches GO</h3>
+      <p class="kachel__text">Kontakt · Nurse-Bewerbung · Bewerbungsgespräch / mündliches GO · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">5 Karten</span>
+        <span class="hs-pill hs-pill--hell">46 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-k-in-1.html?pur=1">
+      <div class="kachel__typ">K-IN-1</div>
+      <h3 class="kachel__titel">Institution</h3>
+      <p class="kachel__text">Kontakt · Institution · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">3 Karten</span>
+        <span class="hs-pill hs-pill--hell">23 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-k-em-1.html?pur=1">
+      <div class="kachel__typ">K-EM-1</div>
+      <h3 class="kachel__titel">Employee</h3>
+      <p class="kachel__text">Kontakt · Employee · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">8 Karten</span>
+        <span class="hs-pill hs-pill--hell">86 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-k-fe-1.html?pur=1">
+      <div class="kachel__typ">K-FE-1</div>
+      <h3 class="kachel__titel">Former Employee</h3>
+      <p class="kachel__text">Kontakt · Former Employee · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">7 Karten</span>
+        <span class="hs-pill hs-pill--hell">79 Felder</span></div>
+    </a>
+  </div>
+  <h2>Unternehmen</h2>
+  <div class="raster">
+    <a class="kachel" href="matrix-u-1.html?pur=1">
+      <div class="kachel__typ">U-1</div>
+      <h3 class="kachel__titel">Institution (Standard)</h3>
+      <p class="kachel__text">Unternehmen · Institution (Standard) · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">5 Karten</span>
+        <span class="hs-pill hs-pill--hell">37 Felder</span></div>
+    </a>
+  </div>
+  <h2>Deal</h2>
+  <div class="raster">
+    <a class="kachel" href="matrix-d-1.html?pur=1">
+      <div class="kachel__typ">D-1</div>
+      <h3 class="kachel__titel">Verleih · Offener Einsatz / Potentielle Matches in Abklärung</h3>
+      <p class="kachel__text">Deal · Verleih · Offener Einsatz / Potentielle Matches in Abklärung · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">4 Karten</span>
+        <span class="hs-pill hs-pill--hell">51 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-d-2.html?pur=1">
+      <div class="kachel__typ">D-2</div>
+      <h3 class="kachel__titel">Verleih · Mündliches GO</h3>
+      <p class="kachel__text">Deal · Verleih · Mündliches GO · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">7 Karten</span>
+        <span class="hs-pill hs-pill--hell">67 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-d-3.html?pur=1">
+      <div class="kachel__typ">D-3</div>
+      <h3 class="kachel__titel">Verleih · Unterschrieben – nicht gestartet</h3>
+      <p class="kachel__text">Deal · Verleih · Unterschrieben – nicht gestartet · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">8 Karten</span>
+        <span class="hs-pill hs-pill--hell">69 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-d-4.html?pur=1">
+      <div class="kachel__typ">D-4</div>
+      <h3 class="kachel__titel">Verleih · Unterschrieben – Einsatz läuft</h3>
+      <p class="kachel__text">Deal · Verleih · Unterschrieben – Einsatz läuft · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">8 Karten</span>
+        <span class="hs-pill hs-pill--hell">69 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-d-v-1.html?pur=1">
+      <div class="kachel__typ">D-V-1</div>
+      <h3 class="kachel__titel">Vermittlung · Offene Stage</h3>
+      <p class="kachel__text">Deal · Vermittlung · Offene Stage · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">4 Karten</span>
+        <span class="hs-pill hs-pill--hell">39 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-d-v-2.html?pur=1">
+      <div class="kachel__typ">D-V-2</div>
+      <h3 class="kachel__titel">Vermittlung · In Abklärung / Matching erfolgt</h3>
+      <p class="kachel__text">Deal · Vermittlung · In Abklärung / Matching erfolgt · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">7 Karten</span>
+        <span class="hs-pill hs-pill--hell">52 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-d-c-1.html?pur=1">
+      <div class="kachel__typ">D-C-1</div>
+      <h3 class="kachel__titel">Consulting · Offene Stage</h3>
+      <p class="kachel__text">Deal · Consulting · Offene Stage · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">5 Karten</span>
+        <span class="hs-pill hs-pill--hell">27 Felder</span></div>
+    </a>
+    <a class="kachel" href="matrix-d-c-2.html?pur=1">
+      <div class="kachel__typ">D-C-2</div>
+      <h3 class="kachel__titel">Consulting · In Abklärung / Matching erfolgt</h3>
+      <p class="kachel__text">Deal · Consulting · In Abklärung / Matching erfolgt · Kartenaufteilung aus Sandbox-Matrizen.xlsx</p>
+      <div class="kachel__meta"><span class="hs-pill hs-pill--hell">7 Karten</span>
+        <span class="hs-pill hs-pill--hell">34 Felder</span></div>
+    </a>
+  </div>
+</div>
+</body>
+</html>

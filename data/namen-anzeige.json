@@ -1,0 +1,27 @@
+{
+  "_hinweis": "Anzeigenamen für Phasenwerte und Feldbezeichnungen. Die internen Werte in HubSpot bleiben unverändert – hier stehen nur die Namen, die in Ansichten, Listen und Dokumenten erscheinen.",
+  "_beispiel": "«nurse_intro» heisst im Sandkasten neu «Talent - Intro-Call».",
+
+  "felder": {
+    "recruiting_phase": "Talent-Phase"
+  },
+
+  "werte": {
+    "nurse_lead": "Talent - New registration, contact initiated",
+    "nurse_intro": "Talent - Intro-Call",
+    "nurse_onboarding": "Talent - Bewerbungsgespräch, mündl. GO",
+    "employee": "Employee",
+    "former_employee": "Former Employee",
+    "institution": "Institution"
+  },
+
+  "typen": {
+    "Nurse": "Talent"
+  },
+
+  "_bedingungen": "Eigenschaften, wie sie in den Kartenbedingungen stehen – die echten HubSpot-Namen. publikum = Zielgruppe der Karte (Kontakt-Typ bzw. Deal Kategorie), stage = Phase/Stage (Talent-Phase bzw. Deal Stage); die Stage wird nur genannt, wenn der Typ allein nicht eindeutig ist.",
+  "bedingungen": {
+    "kontakt": { "publikum": "Kontakt-Typ", "stage": "Talent-Phase" },
+    "deal": { "publikum": "Deal Kategorie", "stage": "Deal Stage" }
+  }
+}

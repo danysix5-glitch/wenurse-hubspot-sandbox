@@ -1,0 +1,698 @@
+/* ============================================================================
+   hubspot.css — Nachbau des HubSpot-CRM-Record-Layouts (Light Mode)
+   WeNurse Sandbox · rein statisch, keine Verbindung zu HubSpot
+   Stand: 2026-09 · Zielbild: Kontakt-, Unternehmens- und Deal-Ansicht
+   ============================================================================ */
+
+/* ---------- 1. Design-Tokens -------------------------------------------------
+   Angelehnt an die HubSpot-Oberfläche. Hier zentral ändern, wenn die
+   Sandbox an ein neues HubSpot-Theme angepasst werden soll.              */
+:root {
+  /* Flächen */
+  --hs-canvas: #eef2f5;
+  --hs-card: #ffffff;
+  --hs-card-alt: #fafcff;
+  --hs-hover: #f5f8fa;
+  --hs-token-bg: #eaf0f6;
+  --hs-chip-bg: #ffffff;
+
+  /* Linien */
+  --hs-border: #dfe3eb;
+  --hs-border-2: #cbd6e2;
+  --hs-border-3: #e5e9ef;
+
+  /* Text */
+  --hs-text: #33475b;
+  --hs-text-2: #516f90;
+  --hs-text-3: #7c98b6;
+  --hs-leer: #99acc2;
+
+  /* Akzente */
+  --hs-link: #0091ae;
+  --hs-orange: #ff7a59;
+  --hs-orange-600: #e8452c;
+  --hs-teal: #00bda5;
+  --hs-teal-dark: #00998a;
+  --hs-green: #00a55e;
+  --hs-blue: #3e71f4;
+  --hs-yellow: #f5c26b;
+  --hs-grey-pill: #7c98b6;
+
+  /* Form */
+  --hs-radius: 8px;
+  --hs-radius-sm: 5px;
+  --hs-shadow: 0 1px 2px rgba(45, 62, 80, .07);
+  --hs-shadow-hover: 0 2px 8px rgba(45, 62, 80, .13);
+
+  /* Typografie */
+  --hs-font: "Lexend Deca", -apple-system, BlinkMacSystemFont, "Segoe UI",
+             Roboto, "Helvetica Neue", Arial, sans-serif;
+  --hs-fs-label: 12px;
+  --hs-fs: 14px;
+  --hs-fs-titel: 15px;
+  --hs-fs-name: 20px;
+
+  /* Sandbox-Leiste (wird von sandbox.js gemessen) */
+  --sb-h: 0px;
+}
+
+/* Optional: echte HubSpot-Schrift laden. Offline einfach auskommentiert lassen.
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300..700&display=swap");
+*/
+
+/* ---------- 2. Grundlagen --------------------------------------------------- */
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--hs-font);
+  font-size: var(--hs-fs);
+  line-height: 1.45;
+  color: var(--hs-text);
+  background: var(--hs-canvas);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--hs-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--hs-orange);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ---------- 3. Shell / Spalten --------------------------------------------- */
+.hs-app {
+  display: grid;
+  grid-template-columns: 300px minmax(520px, 1fr) 384px;
+  gap: 6px;
+  padding: 12px 12px 12px 4px;
+  align-items: start;
+  height: calc(100vh - var(--sb-h) - 24px);
+  min-height: 620px;
+}
+
+.hs-col {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100%;
+  /* Links Platz für die Änderungs-Marker der Sandbox */
+  padding: 0 0 0 14px;
+  scrollbar-width: thin;
+}
+.hs-col::-webkit-scrollbar { width: 8px; }
+.hs-col::-webkit-scrollbar-thumb {
+  background: rgba(45, 62, 80, .18);
+  border-radius: 8px;
+}
+.hs-col > * + * { margin-top: 12px; }
+
+/* ---------- 4. Karten ------------------------------------------------------ */
+.hs-card {
+  background: var(--hs-card);
+  border: 1px solid var(--hs-border);
+  border-radius: var(--hs-radius);
+  box-shadow: var(--hs-shadow);
+}
+
+.hs-card__kopf {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  min-height: 44px;
+}
+.hs-card__kopf + .hs-card__koerper { border-top: 1px solid var(--hs-border-3); }
+
+.hs-card__titel {
+  font-size: var(--hs-fs);
+  font-weight: 600;
+  color: var(--hs-text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hs-card__anzahl { color: var(--hs-text-2); font-weight: 400; }
+.hs-card__spacer { flex: 1 1 auto; }
+.hs-card__koerper { padding: 12px; }
+
+.hs-klapp {
+  width: 20px; height: 20px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--hs-text-2);
+  border-radius: 4px;
+}
+.hs-klapp:hover { background: var(--hs-hover); color: var(--hs-text); }
+
+/* Kopfzeile der linken Record-Karte */
+.hs-recordkopf {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--hs-border-3);
+}
+.hs-recordkopf__zurueck {
+  display: inline-flex; align-items: center; gap: 2px;
+  color: var(--hs-text-2); font-size: var(--hs-fs);
+  padding: 4px 6px; border-radius: 5px;
+}
+.hs-recordkopf__zurueck:hover { background: var(--hs-hover); color: var(--hs-text); }
+
+.hs-actions-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 10px;
+  border: 1px solid var(--hs-border-2);
+  border-radius: 5px;
+  font-size: 13px;
+  color: var(--hs-text);
+  background: #fff;
+}
+.hs-actions-btn:hover { background: var(--hs-hover); }
+
+.hs-iconbtn {
+  width: 28px; height: 28px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 5px;
+  color: var(--hs-text-2);
+}
+.hs-iconbtn:hover { background: var(--hs-hover); color: var(--hs-text); }
+
+/* ---------- 5. Record-Identität (links) ------------------------------------ */
+.hs-ident { padding: 14px 12px 4px; }
+.hs-ident__zeile { display: flex; gap: 10px; align-items: flex-start; }
+
+.hs-avatar {
+  flex: 0 0 auto;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: #e5eaf0;
+  color: #516f90;
+  display: inline-flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hs-avatar svg { width: 20px; height: 20px; }
+.hs-avatar--xs { width: 24px; height: 24px; }
+.hs-avatar--xs svg { width: 13px; height: 13px; }
+.hs-avatar--initialen {
+  font-weight: 600; font-size: 13px; letter-spacing: .3px;
+  background: #d6e0ea; color: #33475b;
+}
+.hs-avatar--xs.hs-avatar--initialen { font-size: 10px; }
+.hs-avatar--teal { background: #ccf1eb; color: #00786a; }
+.hs-avatar--blau { background: #dbe4ff; color: #2c4fb8; }
+.hs-avatar--violett { background: #e7e0fb; color: #5a44b5; }
+
+.hs-ident__name {
+  font-size: var(--hs-fs-name);
+  font-weight: 600;
+  color: var(--hs-text);
+  margin: 2px 0 4px;
+  line-height: 1.25;
+}
+.hs-ident__unter { color: var(--hs-text-2); font-size: 13px; }
+.hs-ident__badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+
+/* Aktions-Icons unter der Identität */
+.hs-aktionen {
+  display: flex;
+  gap: 4px;
+  padding: 12px 8px 8px;
+  border-bottom: 1px solid var(--hs-border-3);
+}
+.hs-aktionen__item {
+  flex: 1 1 0;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 6px 2px;
+  border-radius: 6px;
+  color: var(--hs-text-2);
+  font-size: 11px;
+  line-height: 1.1;
+}
+.hs-aktionen__item:hover { background: var(--hs-hover); color: var(--hs-text); }
+.hs-aktionen__item svg { color: var(--hs-text-2); }
+.hs-aktionen__item:hover svg { color: var(--hs-text); }
+
+/* ---------- 6. Abschnitt + Felder ------------------------------------------ */
+.hs-abschnitt { border-top: 1px solid var(--hs-border-3); }
+.hs-abschnitt:first-of-type { border-top: 0; }
+
+.hs-abschnitt__kopf {
+  display: flex; align-items: center; gap: 6px;
+  padding: 10px 12px;
+}
+.hs-abschnitt__kopf:hover { background: var(--hs-hover); }
+.hs-abschnitt__titel {
+  font-size: var(--hs-fs-titel);
+  font-weight: 600;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+/* Interner Kartenname (HubSpot) – eigene Zeile unter dem Kartentitel, immer klein */
+.hs-abschnitt__karteid {
+  flex: 1 1 100%;
+  padding: 1px 12px 0 30px;
+  color: var(--hs-text-soft);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: .2px;
+  text-transform: lowercase;
+  word-break: break-all;
+}
+
+/* Ein-/Ausklappen von Abschnitten und Karten */
+.hs-abschnitt__kopf { cursor: pointer; }
+.hs-abschnitt--zu .hs-abschnitt__kopf > svg:first-child { transform: rotate(-90deg); }
+.hs-abschnitt--zu > .hs-felder,
+.hs-abschnitt--zu > .hs-abschnitt-unter,
+.hs-abschnitt--zu > .hs-gruppe__inhalt { display: none; }
+
+/* Gruppierter Abschnitt in der Mittelspalte: Überschrift + Karten */
+.hs-abschnitt--mitte { border-top: 0; }
+.hs-abschnitt--mitte > .hs-abschnitt__kopf { padding: 6px 2px 8px; }
+.hs-abschnitt--mitte > .hs-abschnitt__kopf:hover { background: transparent; }
+.hs-abschnitt--mitte .hs-abschnitt__titel { font-size: 16px; }
+.hs-gruppe__inhalt > * + * { margin-top: 10px; }
+.hs-abschnitt-unter > .hs-abschnitt__kopf { padding-left: 22px; }
+.hs-abschnitt-unter > .hs-abschnitt__titel { font-size: 14px; }
+
+.hs-felder {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 16px;
+  padding: 2px 12px 16px;
+}
+/* Linke Record-Karte: Eigenschaften untereinander, eine pro Zeile */
+.hs-felder--1 {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  padding: 0 16px 18px;
+}
+.hs-felder--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.hs-felder--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.hs-felder--karte { padding: 12px 0 0; }
+
+.hs-feld { min-width: 0; }
+.hs-feld--breit { grid-column: 1 / -1; }
+
+.hs-feld__label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--hs-fs-label);
+  line-height: 1.35;
+  color: var(--hs-text-2);
+  margin-bottom: 2px;
+  word-break: break-word;
+}
+.hs-feld__wert {
+  font-size: var(--hs-fs);
+  color: var(--hs-text);
+  word-break: break-word;
+}
+.hs-leer { color: var(--hs-leer); }
+
+.hs-wert--lang { line-height: 1.5; color: var(--hs-text-2); }
+
+/* Token (Aufzählungswerte, wie HubSpot sie darstellt) */
+.hs-tokens { display: inline; }
+.hs-token {
+  display: inline-flex; align-items: center; gap: 3px;
+  background: var(--hs-token-bg);
+  border-radius: 4px;
+  padding: 2px 4px 2px 8px;
+  margin: 0 4px 4px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--hs-text);
+  max-width: 100%;
+}
+.hs-token svg { color: var(--hs-text-3); flex: 0 0 auto; }
+.hs-token--ohne-x { padding-right: 8px; }
+
+/* Pills (Status, Kategorien) */
+.hs-pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+.hs-pill--teal { background: var(--hs-teal-dark); }
+.hs-pill--gruen { background: var(--hs-green); }
+.hs-pill--blau { background: var(--hs-blue); }
+.hs-pill--grau { background: var(--hs-grey-pill); }
+.hs-pill--gelb { background: var(--hs-yellow); color: #6b4c00; }
+.hs-pill--orange { background: var(--hs-orange-600); }
+.hs-pill--hell {
+  background: var(--hs-token-bg); color: var(--hs-text-2); font-weight: 500;
+}
+
+/* Person / Link */
+.hs-person { display: inline-flex; align-items: center; gap: 6px; }
+.hs-person .hs-link { font-weight: 500; }
+
+/* Meter (z. B. Pensenum) */
+.hs-meter { display: flex; align-items: center; gap: 8px; }
+.hs-meter__track {
+  flex: 1 1 auto; max-width: 120px; height: 6px;
+  background: var(--hs-token-bg); border-radius: 4px; overflow: hidden;
+}
+.hs-meter__fill { height: 100%; background: var(--hs-teal); border-radius: 4px; }
+
+/* ---------- 7. Tabs / Sub-Tabs / Filter ------------------------------------ */
+.hs-tabs {
+  display: flex; align-items: center; gap: 4px;
+  padding: 6px 8px;
+  background: var(--hs-card-alt);
+  border: 1px solid var(--hs-border);
+  border-radius: var(--hs-radius);
+  box-shadow: var(--hs-shadow);
+  position: sticky; top: 0; z-index: 5;
+}
+.hs-tab {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--hs-text-2);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.hs-tab:hover { background: var(--hs-hover); color: var(--hs-text); }
+.hs-tab--aktiv {
+  background: #fff;
+  border-color: var(--hs-border-2);
+  color: var(--hs-text);
+  box-shadow: var(--hs-shadow);
+}
+
+.hs-subtabs {
+  display: flex; align-items: center; gap: 18px;
+  padding: 0 4px 6px;
+  border-bottom: 1px solid var(--hs-border-2);
+}
+.hs-subtab {
+  padding: 8px 2px;
+  font-size: 13px;
+  color: var(--hs-text-2);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -7px;
+}
+.hs-subtab:hover { color: var(--hs-text); }
+.hs-subtab--aktiv { color: var(--hs-text); border-bottom-color: var(--hs-text); }
+
+.hs-suche {
+  display: flex; align-items: center; gap: 6px;
+  border: 1px solid var(--hs-border-2);
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: var(--hs-text-3);
+  background: #fff;
+  min-width: 150px;
+}
+.hs-suche input {
+  border: 0; outline: 0; font: inherit; color: var(--hs-text);
+  background: transparent; width: 100%;
+}
+
+.hs-filterzeile {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+}
+.hs-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--hs-border-2);
+  background: var(--hs-chip-bg);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: var(--hs-text-2);
+  white-space: nowrap;
+}
+.hs-chip:hover { border-color: var(--hs-text-3); color: var(--hs-text); }
+.hs-chip svg { color: var(--hs-text-3); }
+.hs-chip--klar { border-color: transparent; color: var(--hs-text-2); }
+
+/* ---------- 8. Activity-Feed ----------------------------------------------- */
+.hs-feed__gruppe {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--hs-text-2);
+  padding: 4px 2px 8px;
+}
+
+.hs-activity {
+  background: #fff;
+  border: 1px solid var(--hs-border);
+  border-radius: var(--hs-radius);
+  box-shadow: var(--hs-shadow);
+  padding: 12px 14px;
+}
+.hs-activity + .hs-activity { margin-top: 10px; }
+
+.hs-activity__kopf {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 13px;
+  color: var(--hs-text-2);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.hs-activity__kopf:hover { background: var(--hs-hover); }
+.hs-activity__kopf > svg:last-child { transition: transform .15s ease; }
+.hs-activity--zu .hs-activity__koerper,
+.hs-activity--zu .hs-activity__fuss { display: none; }
+.hs-activity--zu .hs-activity__kopf > svg:last-child { transform: rotate(-90deg); }
+.hs-activity__titel { font-weight: 600; color: var(--hs-text); }
+.hs-activity__meta { color: var(--hs-text-2); }
+.hs-activity__zeit {
+  margin-left: auto; white-space: nowrap; color: var(--hs-text-3);
+  font-size: 12px; display: inline-flex; align-items: center; gap: 4px;
+}
+.hs-activity__koerper { margin-top: 6px; padding-left: 22px; }
+.hs-activity__koerper p { margin: 0 0 6px; color: var(--hs-text-2); }
+.hs-activity__koerper p:last-child { margin-bottom: 0; }
+.hs-activity__betreff { color: var(--hs-text); }
+.hs-activity__link { font-size: 12px; }
+
+.hs-activity__fuss {
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 10px; padding-left: 22px;
+  font-size: 12px; color: var(--hs-text-2);
+}
+.hs-activity__stat { display: inline-flex; align-items: center; gap: 5px; }
+.hs-activity__stat b { font-weight: 600; color: var(--hs-text); }
+.hs-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.hs-dot--gruen { background: var(--hs-green); }
+.hs-dot--gelb { background: var(--hs-yellow); }
+.hs-dot--grau { background: var(--hs-border-2); }
+
+.hs-activity--task { border-left: 3px solid var(--hs-orange); }
+.hs-activity--task .hs-activity__titel { color: var(--hs-text); }
+
+/* Angepinnte Notiz (oben im Feed hervorgehoben) */
+.hs-activity--pinned {
+  background: #fdf7e2;
+  border-color: #f0e2b4;
+}
+.hs-activity--pinned .hs-activity__kopf:hover { background: #f7efd2; }
+
+.hs-checkbox {
+  width: 16px; height: 16px; border: 1.5px solid var(--hs-border-2);
+  border-radius: 50%; display: inline-flex; align-items: center;
+  justify-content: center; color: transparent; flex: 0 0 auto; margin-top: 1px;
+}
+.hs-checkbox--fertig { background: var(--hs-green); border-color: var(--hs-green); color: #fff; }
+
+/* ---------- 9. Tracker (Deal) ---------------------------------------------- */
+.hs-tracker-kopf {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  font-size: 13px; color: var(--hs-text-2);
+  margin-bottom: 10px;
+}
+
+.hs-stagebar {
+  display: flex; gap: 2px; height: 14px; margin-bottom: 4px;
+}
+.hs-stagebar__seg {
+  flex: 1 1 0; background: var(--hs-token-bg);
+  border-radius: 2px; position: relative;
+}
+.hs-stagebar__seg:first-child { border-radius: 4px 2px 2px 4px; }
+.hs-stagebar__seg:last-child { border-radius: 2px 4px 4px 2px; }
+.hs-stagebar__seg--voll { background: var(--hs-text); }
+.hs-stagebar__seg--halb {
+  background: linear-gradient(90deg, var(--hs-text) 50%, var(--hs-token-bg) 50%);
+}
+.hs-stagebar__check {
+  position: absolute; inset: 0; display: flex; align-items: center;
+  justify-content: center; color: #fff;
+}
+
+.hs-tracker-leiste {
+  display: flex; align-items: center; gap: 8px; margin: 10px 0 16px;
+}
+.hs-tracker-leiste__bar {
+  flex: 1 1 auto; height: 10px; border-radius: 999px;
+  background: var(--hs-token-bg); overflow: hidden;
+}
+.hs-tracker-leiste__fill {
+  height: 100%; border-radius: 999px; background: var(--hs-teal-dark);
+}
+.hs-tracker-leiste__txt { font-size: 12px; color: var(--hs-text-2); white-space: nowrap; }
+
+.hs-zahlengitter {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;
+}
+
+/* Deal-Progression (Start/Ende + Balken) */
+.hs-progress { padding: 4px 0 0; }
+.hs-progress__zeile {
+  display: flex; justify-content: space-between; gap: 12px; margin-bottom: 4px;
+}
+.hs-progress__datum { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; }
+.hs-progress__datum svg { color: var(--hs-text-3); }
+.hs-progress__bar {
+  height: 22px; border-radius: 4px; background: var(--hs-token-bg);
+  overflow: hidden; margin-bottom: 6px;
+}
+.hs-progress__fill { height: 100%; background: #dbe3ec; }
+.hs-progress__werte {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
+  font-size: 12px; color: var(--hs-text-2);
+}
+
+/* ---------- 10. Rechte Spalte / Record summary ----------------------------- */
+.hs-summary__kopf {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 14px;
+}
+.hs-summary__titel { font-size: var(--hs-fs-titel); font-weight: 600; margin: 0; }
+
+.hs-aso__kopf {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 12px;
+}
+.hs-aso__titel { font-size: var(--hs-fs); font-weight: 600; margin: 0; }
+.hs-aso__tools { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; }
+.hs-aso__add {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 13px; color: var(--hs-text-2); padding: 4px 6px; border-radius: 5px;
+}
+.hs-aso__add:hover { background: var(--hs-hover); color: var(--hs-text); }
+
+.hs-aso__liste { padding: 0 12px 4px; }
+.hs-aso__filterzeile {
+  display: flex; align-items: center; gap: 8px; padding: 0 12px 10px;
+}
+.hs-aso__fuss {
+  display: flex; align-items: center; gap: 6px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--hs-border-3);
+  font-size: 13px; font-weight: 500;
+}
+
+.hs-eintrag {
+  border: 1px solid var(--hs-border);
+  border-radius: var(--hs-radius);
+  padding: 10px 12px;
+  background: #fff;
+}
+.hs-eintrag + .hs-eintrag { margin-top: 8px; }
+.hs-eintrag:hover { box-shadow: var(--hs-shadow-hover); }
+.hs-eintrag__kopf { display: flex; gap: 8px; align-items: flex-start; }
+.hs-eintrag__titel { font-weight: 600; font-size: 13px; color: var(--hs-text); }
+.hs-eintrag__zeilen { margin-top: 6px; font-size: 12px; color: var(--hs-text-2); }
+.hs-eintrag__zeilen div { margin-top: 2px; }
+.hs-eintrag__zeilen b { font-weight: 400; color: var(--hs-text-2); }
+.hs-eintrag__labels { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.hs-label-chip {
+  background: var(--hs-token-bg); border-radius: 4px;
+  padding: 2px 8px; font-size: 11px; color: var(--hs-text-2);
+}
+.hs-eintrag__zeile-oben {
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+}
+.hs-eintrag__sep { border-top: 1px solid var(--hs-border-3); margin: 8px 0; }
+
+/* Lead Score */
+.hs-score { display: flex; gap: 16px; align-items: center; }
+.hs-score__gross {
+  font-size: 40px; font-weight: 300; line-height: 1; color: var(--hs-text);
+}
+.hs-score__delta {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12px; color: var(--hs-green); margin-top: 4px;
+}
+.hs-score__liste { flex: 1 1 auto; }
+.hs-score__row {
+  display: flex; justify-content: space-between; gap: 12px;
+  font-size: 13px; padding: 3px 0;
+}
+.hs-score__row span:first-child { color: var(--hs-text-2); }
+.hs-score__row span:last-child { font-weight: 600; }
+
+/* ---------- 11. Leere Zustände / Illustrationen ---------------------------- */
+.hs-leerbox { text-align: center; padding: 26px 16px; color: var(--hs-text-2); }
+.hs-leerbox__bild { color: #b9cbe0; margin-bottom: 10px; }
+.hs-leerbox p { margin: 0; font-size: 13px; }
+
+/* ---------- 12. Buttons ---------------------------------------------------- */
+.hs-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--hs-border-2);
+  background: #fff;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--hs-text);
+}
+.hs-btn:hover { background: var(--hs-hover); }
+.hs-btn--primaer {
+  background: var(--hs-orange); border-color: var(--hs-orange); color: #fff;
+  font-weight: 500;
+}
+.hs-btn--primaer:hover { background: var(--hs-orange-600); border-color: var(--hs-orange-600); }
+
+/* ---------- 13. Responsiv -------------------------------------------------- */
+@media (max-width: 1500px) {
+  .hs-app { grid-template-columns: 280px minmax(440px, 1fr) 340px; }
+}
+@media (max-width: 1240px) {
+  .hs-app {
+    grid-template-columns: minmax(0, 1fr);
+    height: auto;
+    min-height: 0;
+  }
+  .hs-col { overflow: visible; max-height: none; }
+  .hs-tabs { position: static; }
+  .hs-zahlengitter { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ---------- 14. Druck / PDF für die Abnahme -------------------------------- */
+@media print {
+  body { background: #fff; }
+  .sb-bar, .sb-drawer, .sb-mark, .sb-hinweis { display: none !important; }
+  .hs-app {
+    height: auto;
+    grid-template-columns: 72mm 1fr 62mm;
+    gap: 4mm;
+    padding: 0;
+  }
+  .hs-col { overflow: visible; max-height: none; }
+  .hs-card, .hs-activity, .hs-eintrag { box-shadow: none; break-inside: avoid; }
+}

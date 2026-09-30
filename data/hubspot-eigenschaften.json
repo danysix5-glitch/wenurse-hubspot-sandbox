@@ -1,0 +1,1135 @@
+{
+  "portal": 26786204,
+  "gelesen": "2026-09-23T10:29:52",
+  "objekte": {
+    "contacts": {
+      "anzahl_eigenschaften": 533,
+      "anzahl_eigene": 118,
+      "stichprobe": 400,
+      "gruppen": {
+        "deal_information": "Deal information",
+        "contactinformation": "Contact information",
+        "socialmediainformation": "Social media information",
+        "emailinformation": "Email information",
+        "contactlcs": "Contact Lifecycle Stage Properties"
+      },
+      "auswahl": [
+        {
+          "name": "date_of_sign",
+          "label": "Datum der Rahmenvertragserstellung",
+          "gruppe": "deal_information",
+          "typ": "date",
+          "feldtyp": "date",
+          "optionen": [],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "hourly_rate",
+          "label": "Stundensatz",
+          "gruppe": "deal_information",
+          "typ": "number",
+          "feldtyp": "number",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "contract_start_date",
+          "label": "Vertragsbeginndatum",
+          "gruppe": "deal_information",
+          "typ": "date",
+          "feldtyp": "date",
+          "optionen": [],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "ahv",
+          "label": "AHV",
+          "gruppe": "contactinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "abfrage_pflegende",
+          "label": "Abfrage Pflegende",
+          "gruppe": "contactinformation",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "anrede",
+          "label": "Anrede_korrekt",
+          "gruppe": "contactinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 82
+        },
+        {
+          "name": "ansprache",
+          "label": "Ansprache",
+          "gruppe": "contactinformation",
+          "typ": "enumeration",
+          "feldtyp": "radio",
+          "optionen": [
+            "Liebe",
+            "Lieber",
+            "Hallo"
+          ],
+          "fuellrate_prozent": 82
+        },
+        {
+          "name": "anstellung",
+          "label": "Anstellung Einsatz",
+          "gruppe": "contactinformation",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "Monatslohn",
+            "Stundenlohn"
+          ],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "number_of_shares",
+          "label": "Anzahl der Aktien",
+          "gruppe": "contactinformation",
+          "typ": "number",
+          "feldtyp": "number",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "arbeitsfahig",
+          "label": "Arbeitsfähig",
+          "gruppe": "contactinformation",
+          "typ": "enumeration",
+          "feldtyp": "checkbox",
+          "optionen": [
+            "Ja",
+            "Nein"
+          ],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "auto_zur_verfugung_neu",
+          "label": "Auto zur Verfügung (neu)",
+          "gruppe": "contactinformation",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "Ja",
+            "Nein"
+          ],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "auto_zur_verfugung",
+          "label": "Auto zur Verfügung Kommentar",
+          "gruppe": "contactinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "bank",
+          "label": "Bank",
+          "gruppe": "contactinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "batch",
+          "label": "Batch",
+          "gruppe": "contactinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "schichten",
+          "label": "Dienste Kommentar",
+          "gruppe": "contactinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "fachbereich",
+          "label": "Fachbereich",
+          "gruppe": "contactinformation",
+          "typ": "enumeration",
+          "feldtyp": "checkbox",
+          "optionen": [
+            "Spital",
+            "Langzeitpflege",
+            "Spitex",
+            "Reha",
+            "Psychiatrie",
+            "Anderes"
+          ],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "fachgebiet",
+          "label": "Fachgebiet",
+          "gruppe": "contactinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "grade__diploma_",
+          "label": "Grade (Diploma)",
+          "gruppe": "contactinformation",
+          "typ": "enumeration",
+          "feldtyp": "checkbox",
+          "optionen": [
+            "Fachfrau Gesundheit EFZ",
+            "Fachmann Gesundheit EFZ",
+            "Diplomierte Pflegefachfrau",
+            "Diplomierter Pflegefachmann",
+            "Diplomierte Pflegefachfrau HF",
+            "Diplomierter Pflegefachmann HF",
+            "Diplomierte Pflegefachfrau FH",
+            "Diplomierter Pflegefachmann FH",
+            "Dipl. mit Zusatzfunktion",
+            "Fachexperte / in",
+            "Leitungsfunktion",
+            "Anderes"
+          ],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "instagram_handle",
+          "label": "Instagram Account Name",
+          "gruppe": "socialmediainformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "hs_email_optout_895571662",
+          "label": "Opted out of email: CH WeNurse Updates",
+          "gruppe": "emailinformation",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "No",
+            "Yes"
+          ],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "hs_email_optout_789507687",
+          "label": "Opted out of email: DE Marketinginformationen",
+          "gruppe": "emailinformation",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "No",
+            "Yes"
+          ],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "hs_email_optout_2593357676",
+          "label": "Opted out of email: Gedankenblicke von Alessia",
+          "gruppe": "emailinformation",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "No",
+            "Yes"
+          ],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "hs_email_optout_165753134",
+          "label": "Opted out of email: One to One",
+          "gruppe": "emailinformation",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "No",
+            "Yes"
+          ],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "hs_email_optout_354282145",
+          "label": "Opted out of email: Support",
+          "gruppe": "emailinformation",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "hs_email_optout_290609267",
+          "label": "Opted out of email: WhatsApp",
+          "gruppe": "emailinformation",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "hs_email_optout_1057180583",
+          "label": "Opted out of email: careköniz Informationen",
+          "gruppe": "emailinformation",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "entry_date",
+          "label": "Eintrittsdatum",
+          "gruppe": "contactlcs",
+          "typ": "date",
+          "feldtyp": "date",
+          "optionen": [],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "audience",
+          "label": "Kontakt-Typ",
+          "gruppe": "contactlcs",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "Platzhalter Kontakt",
+            "Nurse-Bewerbung",
+            "Institution",
+            "Employee",
+            "Backoffice MA",
+            "Ehemalige:r Mitarbeiter:in",
+            "Others",
+            "Multiplikatoren",
+            "Partner & Friends",
+            "Inaktiv",
+            "Lead",
+            "Potential Investor",
+            "Bewerber Backoffice"
+          ],
+          "fuellrate_prozent": 99
+        },
+        {
+          "name": "recruiting_phase",
+          "label": "recruiting_phase",
+          "gruppe": "contactlcs",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "nurse_lead",
+            "nurse_intro",
+            "nurse_onboarding",
+            "employee",
+            "former_employee",
+            "institution"
+          ],
+          "fuellrate_prozent": 76
+        }
+      ]
+    },
+    "companies": {
+      "anzahl_eigenschaften": 277,
+      "anzahl_eigene": 37,
+      "stichprobe": 400,
+      "gruppen": {
+        "deal_information": "Deal information",
+        "companyinformation": "Company information",
+        "targetaccountsinformation": "Target accounts information"
+      },
+      "auswahl": [
+        {
+          "name": "dienstzeiten",
+          "label": "Dienstzeiten",
+          "gruppe": "deal_information",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 7
+        },
+        {
+          "name": "mail_kreditorenbuchhaltung",
+          "label": "E-Mail Kreditorenbuchhaltung",
+          "gruppe": "deal_information",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 12
+        },
+        {
+          "name": "kostenstelle",
+          "label": "Kostenstelle",
+          "gruppe": "deal_information",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "spatnachtdienstzuschlage",
+          "label": "Spät-/Nachtdienstzuschläge",
+          "gruppe": "deal_information",
+          "typ": "bool",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "umkleidezeit",
+          "label": "Umkleidezeit",
+          "gruppe": "deal_information",
+          "typ": "bool",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 4
+        },
+        {
+          "name": "has_active_deal",
+          "label": "aktiver Deal vorhanden",
+          "gruppe": "deal_information",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "arbeitsutensilien",
+          "label": "Arbeitsutensilien",
+          "gruppe": "companyinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 12
+        },
+        {
+          "name": "auftragsverhaltnis",
+          "label": "Auftragsverhältnis",
+          "gruppe": "companyinformation",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "Aktiver Kunde",
+            "Aktiver Kunde + Warteliste",
+            "Passiver Kunde",
+            "Passiver Kunde + Warteliste",
+            "Potenzieller Kunde",
+            "Potenzieller Kunde + Warteliste",
+            "Blacklist",
+            "Archiv"
+          ],
+          "fuellrate_prozent": 91
+        },
+        {
+          "name": "fachbereich___anderes",
+          "label": "Fachbereich - Anderes",
+          "gruppe": "companyinformation",
+          "typ": "enumeration",
+          "feldtyp": "checkbox",
+          "optionen": [
+            "kein Fachgebiet",
+            "Akutbereich",
+            "Akutspital",
+            "Rehaklinik",
+            "Ambulant Behandlung",
+            "Ambulante Physio",
+            "Ambulante Praxis",
+            "Labormedizin",
+            "Apotheke",
+            "Tierarztpraxis",
+            "Notrufzentrale",
+            "Baugenossenschaft",
+            "Alpwirtschaft",
+            "Gartengestaltung",
+            "Entwickler Hygieneprodukte",
+            "Beratungsstelle",
+            "Beratung/Coaching",
+            "Unternehmensberater/Coach",
+            "Coaching",
+            "Eventplaner"
+          ],
+          "fuellrate_prozent": 12
+        },
+        {
+          "name": "fachbereich_institution",
+          "label": "Fachbereich Institution",
+          "gruppe": "companyinformation",
+          "typ": "enumeration",
+          "feldtyp": "checkbox",
+          "optionen": [
+            "Spital",
+            "Langzeitpflege",
+            "Spitex",
+            "Reha",
+            "Psychiatrie",
+            "Anderes"
+          ],
+          "fuellrate_prozent": 89
+        },
+        {
+          "name": "company_email",
+          "label": "Firmen-E-Mail",
+          "gruppe": "companyinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "kanton",
+          "label": "Kanton",
+          "gruppe": "companyinformation",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "AG",
+            "AR",
+            "AI",
+            "BL",
+            "BS",
+            "BE",
+            "FR",
+            "GE",
+            "GL",
+            "GR",
+            "JU",
+            "LU",
+            "NE",
+            "NW",
+            "OW",
+            "SG",
+            "SH",
+            "SZ",
+            "SO",
+            "TI"
+          ],
+          "fuellrate_prozent": 81
+        },
+        {
+          "name": "mittagspause_in_min",
+          "label": "Mittagspause in Min",
+          "gruppe": "companyinformation",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "parkplatz",
+          "label": "Parkplatz",
+          "gruppe": "companyinformation",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 13
+        },
+        {
+          "name": "rahmenvereinbarung_vorhanden",
+          "label": "Rahmenvereinbarung vorhanden",
+          "gruppe": "companyinformation",
+          "typ": "enumeration",
+          "feldtyp": "radio",
+          "optionen": [
+            "Ja",
+            "Nein"
+          ],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "spatnachtdienstzuschlage_chfh",
+          "label": "Spät-/Nachtdienstzuschläge CHF/h",
+          "gruppe": "companyinformation",
+          "typ": "number",
+          "feldtyp": "number",
+          "optionen": [],
+          "fuellrate_prozent": 3
+        },
+        {
+          "name": "stempelkarte",
+          "label": "Stempelkarte",
+          "gruppe": "companyinformation",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "Stempelkarte WeNurse",
+            "Stempelkarte Institution"
+          ],
+          "fuellrate_prozent": 13
+        },
+        {
+          "name": "umkleidezeit_in_min",
+          "label": "Umkleidezeit in Min",
+          "gruppe": "companyinformation",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "verpflegungsmoglichkeiten",
+          "label": "Verpflegungsmöglichkeiten",
+          "gruppe": "companyinformation",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 12
+        },
+        {
+          "name": "wichtige_bemerkungen",
+          "label": "Wichtige Bemerkungen",
+          "gruppe": "companyinformation",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 8
+        },
+        {
+          "name": "ov_anbindung",
+          "label": "ÖV Anbindung",
+          "gruppe": "companyinformation",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 14
+        },
+        {
+          "name": "hsgroadshow_status",
+          "label": "HSG-Roadshow Status",
+          "gruppe": "targetaccountsinformation",
+          "typ": "enumeration",
+          "feldtyp": "radio",
+          "optionen": [
+            "Qualifiziert",
+            "Nicht passend",
+            "Warteliste"
+          ],
+          "fuellrate_prozent": 5
+        }
+      ]
+    },
+    "deals": {
+      "anzahl_eigenschaften": 376,
+      "anzahl_eigene": 122,
+      "stichprobe": 400,
+      "gruppen": {
+        "deal_activity": "Deal activity",
+        "deal_revenue": "Deal revenue",
+        "dealinformation": "Deal information",
+        "dealscripted": "Calculated Deal Information",
+        "dealstages": "Deal Stage Properties"
+      },
+      "auswahl": [
+        {
+          "name": "excel_connected",
+          "label": "Excel_connected",
+          "gruppe": "deal_activity",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 9
+        },
+        {
+          "name": "basislohn",
+          "label": "Basislohn (CHF/h)",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 47
+        },
+        {
+          "name": "contribution_margin",
+          "label": "Beitragsmarge",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 44
+        },
+        {
+          "name": "gross_wages",
+          "label": "Bruttolohn",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 44
+        },
+        {
+          "name": "feiertags_anteil",
+          "label": "Feiertags-Anteil",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 47
+        },
+        {
+          "name": "feiertags_anteil__",
+          "label": "Feiertags-Anteil %",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "number",
+          "optionen": [],
+          "fuellrate_prozent": 100
+        },
+        {
+          "name": "feiertags_at_absolut",
+          "label": "Feiertags-Anteil_v2",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 47
+        },
+        {
+          "name": "ferienlohn_anteil",
+          "label": "Ferienlohn-Anteil",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 47
+        },
+        {
+          "name": "ferienlohn_anteil__",
+          "label": "Ferienlohn-Anteil %",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "number",
+          "optionen": [],
+          "fuellrate_prozent": 100
+        },
+        {
+          "name": "ferienlohn_at_absolut",
+          "label": "Ferienlohn-Anteil_v2",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 47
+        },
+        {
+          "name": "besonderes_kosten_deal",
+          "label": "Kommentar Kosten Deal",
+          "gruppe": "deal_revenue",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 90
+        },
+        {
+          "name": "pensum_deal__mehrauswahl_",
+          "label": "Pensum Deal (Mehrauswahl)",
+          "gruppe": "deal_revenue",
+          "typ": "enumeration",
+          "feldtyp": "checkbox",
+          "optionen": [
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%",
+            "60%",
+            "70%",
+            "80%",
+            "90%",
+            "100%"
+          ],
+          "fuellrate_prozent": 94
+        },
+        {
+          "name": "pensum_deal_in__",
+          "label": "Pensum-Deal in %",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "number",
+          "optionen": [],
+          "fuellrate_prozent": 98
+        },
+        {
+          "name": "stundensatz_deal",
+          "label": "Stundensatz Deal",
+          "gruppe": "deal_revenue",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 90
+        },
+        {
+          "name": "revenue_1",
+          "label": "Umsatz_1",
+          "gruppe": "deal_revenue",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 85
+        },
+        {
+          "name": "company_branch",
+          "label": "Abteilung",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 98
+        },
+        {
+          "name": "auto__spitex_",
+          "label": "Auto SPITEX (Nur SPITEX: Wer stellt das Fahrzeug für den Einsatz zur Verfügung",
+          "gruppe": "dealinformation",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "Auto wird von Spitex zur Verfügung gestellt",
+            "Mitarbeiter muss Auto mitbringen"
+          ],
+          "fuellrate_prozent": 13
+        },
+        {
+          "name": "brutto_stundenlohn",
+          "label": "Brutto-Stundenlohn (CHF/h)",
+          "gruppe": "dealinformation",
+          "typ": "number",
+          "feldtyp": "number",
+          "optionen": [],
+          "fuellrate_prozent": 47
+        },
+        {
+          "name": "datum_freiwunsch_einsatz",
+          "label": "Datum Freiwunsch Einsatz",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 22
+        },
+        {
+          "name": "duration_deal_date",
+          "label": "Dauer Deal",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 90
+        },
+        {
+          "name": "duration_deal_months",
+          "label": "Dauer_Deal_Monate",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 99
+        },
+        {
+          "name": "deal_kategorie",
+          "label": "Deal Kategorie",
+          "gruppe": "dealinformation",
+          "typ": "enumeration",
+          "feldtyp": "checkbox",
+          "optionen": [
+            "Consulting",
+            "Verleih",
+            "Vermittlung"
+          ],
+          "fuellrate_prozent": 100
+        },
+        {
+          "name": "deal_duration_in_days_v2",
+          "label": "Deal-Dauer in Tagen_v2",
+          "gruppe": "dealinformation",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 99
+        },
+        {
+          "name": "deal_contact",
+          "label": "Deal-Kontakt",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 91
+        },
+        {
+          "name": "dienstzeiten",
+          "label": "Dienstzeiten (Schichten und Dienstzeiten (inkl. Pausenzeiten)",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "textarea",
+          "optionen": [],
+          "fuellrate_prozent": 80
+        },
+        {
+          "name": "diploma_level_deal",
+          "label": "Diplom Level Deal",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 90
+        },
+        {
+          "name": "mail_ansprechperson_einsatz",
+          "label": "E-Mail Ansprechperson Einsatz",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 81
+        },
+        {
+          "name": "mail_kreditorenbuchhaltung_neu",
+          "label": "E-Mail Kreditorenbuchhaltung neu",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 75
+        },
+        {
+          "name": "mail_kreditorenbuchhaltung",
+          "label": "E-Mail Kreditorenbuchhaltungn (E-Mail für Zustellung Rechnung)",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 79
+        },
+        {
+          "name": "mail_unterschrift_1",
+          "label": "E-Mail Unterschrift 1 (E-Mail Unterschrift 1)",
+          "gruppe": "dealinformation",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 82
+        },
+        {
+          "name": "pensum_deal_pandadoc",
+          "label": "Pensum-Deal (Pandadoc)",
+          "gruppe": "dealscripted",
+          "typ": "string",
+          "feldtyp": "text",
+          "optionen": [],
+          "fuellrate_prozent": 92
+        },
+        {
+          "name": "anteil_13__monatslohn",
+          "label": "Anteil 13. Monatslohn",
+          "gruppe": "dealstages",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 47
+        },
+        {
+          "name": "anteil_13__monatslohn__",
+          "label": "Anteil 13. Monatslohn %",
+          "gruppe": "dealstages",
+          "typ": "number",
+          "feldtyp": "number",
+          "optionen": [],
+          "fuellrate_prozent": 100
+        },
+        {
+          "name": "anteil_13_ml_absolut",
+          "label": "Anteil 13. Monatslohn_v2",
+          "gruppe": "dealstages",
+          "typ": "number",
+          "feldtyp": "calculation_equation",
+          "optionen": [],
+          "fuellrate_prozent": 47
+        },
+        {
+          "name": "anzahl_vertrage_unterschrieben",
+          "label": "Anzahl Verträge unterschrieben",
+          "gruppe": "dealstages",
+          "typ": "number",
+          "feldtyp": "number",
+          "optionen": [],
+          "fuellrate_prozent": 100
+        },
+        {
+          "name": "arbeitgeber_vertrag_unterschrieben",
+          "label": "Arbeitgeber Vertrag Unterschrieben",
+          "gruppe": "dealstages",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 10
+        },
+        {
+          "name": "arbeitnehmer_vertrag_unterschrieben",
+          "label": "Arbeitnehmer Vertrag Unterschrieben",
+          "gruppe": "dealstages",
+          "typ": "enumeration",
+          "feldtyp": "booleancheckbox",
+          "optionen": [
+            "Yes",
+            "No"
+          ],
+          "fuellrate_prozent": 14
+        },
+        {
+          "name": "closed_lost_dropdown",
+          "label": "Closed Lost Dropdown",
+          "gruppe": "dealstages",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "Aktuell kein Personalbedarf",
+            "Kosten zu hoch / Budget nicht ausreichend",
+            "Konditionen / Vertragsbedingungen",
+            "Reaktionszeit oder Besetzungsdauer zu lang",
+            "Keine passenden Profile verfügbar",
+            "Interne Prozesse / Entscheidung vertagt",
+            "Fehlendes Vertrauen / Präferenz für anderen Anbieter",
+            "Region ausserhalb unseres Einsatzgebiets",
+            "Testanfrage / unverbindliche Anfrage",
+            "Kontakt abgebrochen / keine Rückmeldung",
+            "Anderer Grund (bitte angeben)"
+          ],
+          "fuellrate_prozent": 8
+        },
+        {
+          "name": "closed_won_dropdown",
+          "label": "Closed Won Dropdown",
+          "gruppe": "dealstages",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "Passendes Profil / passende Lösung gefunden",
+            "Schnelle Reaktionszeit",
+            "Faire Konditionen / Preise",
+            "Gute Beziehung / hohes Vertrauen",
+            "Empfehlung / Weiterempfehlung",
+            "Positive bisherige Zusammenarbeit",
+            "Hervorragende Servicequalität",
+            "Anderer Grund (bitte angeben)"
+          ],
+          "fuellrate_prozent": 2
+        },
+        {
+          "name": "deal_signature_date",
+          "label": "Datum Vertragserstellung",
+          "gruppe": "dealstages",
+          "typ": "date",
+          "feldtyp": "date",
+          "optionen": [],
+          "fuellrate_prozent": 90
+        },
+        {
+          "name": "deal_erstellungs_maske",
+          "label": "Deal-Erstellungs-Maske",
+          "gruppe": "dealstages",
+          "typ": "enumeration",
+          "feldtyp": "select",
+          "optionen": [
+            "offener Einsatz",
+            "Mündliches Go vorhanden",
+            "Clone Deal"
+          ],
+          "fuellrate_prozent": 32
+        },
+        {
+          "name": "offerte_freibleibend_deal_datum",
+          "label": "Frist für Vertragsunterzeichnung (Datum)",
+          "gruppe": "dealstages",
+          "typ": "date",
+          "feldtyp": "date",
+          "optionen": [],
+          "fuellrate_prozent": 86
+        },
+        {
+          "name": "start_date_deal",
+          "label": "Startdatum Deal",
+          "gruppe": "dealstages",
+          "typ": "date",
+          "feldtyp": "date",
+          "optionen": [],
+          "fuellrate_prozent": 99
+        }
+      ],
+      "pipelines": [
+        {
+          "name": "Institution",
+          "stages": [
+            "offener Einsatz",
+            "Potentielle Matches in Abklärung",
+            "Mündliches GO",
+            "Unterschrieben - nicht gestartet",
+            "Unterschrieben - Einsatz läuft",
+            "Archiv",
+            "No Deal"
+          ]
+        },
+        {
+          "name": "Neue WeNurse",
+          "stages": [
+            "Appointment scheduled",
+            "Qualified to buy",
+            "Presentation scheduled",
+            "Decision Maker Bought-In",
+            "Contract sent",
+            "Closed won",
+            "Closed lost"
+          ]
+        },
+        {
+          "name": "Investors",
+          "stages": [
+            "Email sent",
+            "Call",
+            "Call 2 / Meeting",
+            "Closed won",
+            "Absage"
+          ]
+        }
+      ]
+    }
+  }
+}

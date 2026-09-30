@@ -1,0 +1,40 @@
+{
+  "_zweck": "Ansicht-Umstellung: eine Hilfseigenschaft pro Objekt, deren Wert sagt, welche Ansicht der Sandbox ein Datensatz zeigt. Die Kartenbedingungen heissen dann «<Eigenschaft> = «<Wert>»» statt der bisherigen erfundenen Eigenschaft «Layout-Kontext» (die es in HubSpot nicht gibt).",
+  "_stand": "Nur vorbereitet – in HubSpot wurde nichts geschrieben.",
+
+  "kontakt": {
+    "objekt": "contacts",
+    "eigenschaft": "recruiting_phase",
+    "anzeige": "Talent-Phase",
+    "beschreibung": "Phase im Talent-Funnel und zugleich Ansicht-Umschalter: Der Wert bestimmt, welche Ansicht (Kartenaufteilung) der Sandbox der Kontakt zeigt – der Kontakt-Typ steckt im Wert mit drin, darum genügt eine Bedingung je Karte.",
+    "hinweis": "Bestehende Eigenschaft, wird umgewidmet – die internen Werte bleiben unverändert, nur die Labels werden lesbar.",
+    "werte": {
+      "K-NA-1": {"value": "nurse_lead", "label": "Talent - New registration, contact initiated", "vorhanden": true},
+      "K-NA-2": {"value": "nurse_intro", "label": "Talent - Intro-Call", "vorhanden": true},
+      "K-NA-3": {"value": "nurse_onboarding", "label": "Talent - Bewerbungsgespräch, mündl. GO", "vorhanden": true},
+      "K-IN-1": {"value": "institution", "label": "Institution", "vorhanden": true},
+      "K-EM-1": {"value": "employee", "label": "Employee", "vorhanden": true},
+      "K-FE-1": {"value": "former_employee", "label": "Former Employee", "vorhanden": true},
+      "K-BO-1": {"value": "backoffice", "label": "Backoffice MA / Bewerber Backoffice", "vorhanden": false,
+                 "notiz": "Ansicht ist derzeit inaktiv – Wert nur anlegen, wenn die Ansicht gebaut wird."}
+    }
+  },
+
+  "deal": {
+    "objekt": "deals",
+    "eigenschaft": "ansicht_umstellung",
+    "anzeige": "Ansicht-Umstellung",
+    "beschreibung": "Hilfseigenschaft für den Ansicht-Umschalter: Der Wert bestimmt, welche Ansicht (Kartenaufteilung) der Sandbox der Deal zeigt.",
+    "hinweis": "Neue Eigenschaft – Deals brauchen eine eigene Hilfseigenschaft, weil «recruiting_phase» eine Kontakt-Eigenschaft ist.",
+    "werte": {
+      "D-1":   {"value": "verleih_offener_einsatz", "label": "Verleih - Offener Einsatz / Potentielle Matches", "vorhanden": false},
+      "D-2":   {"value": "verleih_muendliches_go", "label": "Verleih - Mündliches GO", "vorhanden": false},
+      "D-3":   {"value": "verleih_unterschrieben_nicht_gestartet", "label": "Verleih - Unterschrieben, nicht gestartet", "vorhanden": false},
+      "D-4":   {"value": "verleih_unterschrieben_einsatz_laeuft", "label": "Verleih - Unterschrieben, Einsatz läuft", "vorhanden": false},
+      "D-V-1": {"value": "vermittlung_offene_stage", "label": "Vermittlung - Offene Stage", "vorhanden": false},
+      "D-V-2": {"value": "vermittlung_in_abklaerung", "label": "Vermittlung - In Abklärung / Matching erfolgt", "vorhanden": false},
+      "D-C-1": {"value": "consulting_offene_stage", "label": "Consulting - Offene Stage", "vorhanden": false},
+      "D-C-2": {"value": "consulting_in_abklaerung", "label": "Consulting - In Abklärung / Matching erfolgt", "vorhanden": false}
+    }
+  }
+}

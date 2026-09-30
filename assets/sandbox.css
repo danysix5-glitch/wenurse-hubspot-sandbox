@@ -1,0 +1,573 @@
+/* ============================================================================
+   sandbox.css — Bedienelemente der Sandbox (Leiste, Marker, Abnahme-Drawer)
+   Diese Datei ist absichtlich getrennt von hubspot.css:
+   über die Leiste lässt sich alles davon ausblenden, damit die Ansicht
+   exakt wie HubSpot aussieht (z. B. für Screenshots ans Backoffice).
+   ============================================================================ */
+
+/* ---------- 1. Leiste oben ------------------------------------------------- */
+.sb-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 14px;
+  background: #22333f;
+  color: #e8eef2;
+  font-family: var(--hs-font);
+  font-size: 13px;
+  min-height: 52px;
+}
+.sb-bar a { color: #9fd8e0; }
+
+.sb-bar__marke {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 600; letter-spacing: .2px; white-space: nowrap;
+}
+.sb-bar__dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--hs-orange); box-shadow: 0 0 0 3px rgba(255, 122, 89, .22);
+}
+.sb-bar__trenner {
+  width: 1px; height: 24px; background: rgba(255, 255, 255, .18);
+}
+.sb-bar__titel { font-weight: 500; color: #fff; white-space: nowrap; }
+.sb-bar__unter { color: #9db2bf; font-size: 12px; white-space: nowrap; }
+.sb-bar__spacer { flex: 1 1 auto; }
+
+.sb-nav { display: inline-flex; gap: 4px; }
+.sb-nav a {
+  padding: 5px 10px; border-radius: 5px; color: #cbd8e0;
+  border: 1px solid transparent; white-space: nowrap;
+  text-decoration: none;
+}
+.sb-nav a:hover { background: rgba(255, 255, 255, .08); text-decoration: none; }
+.sb-nav a.sb-nav--aktiv {
+  background: rgba(255, 255, 255, .14); color: #fff;
+  border-color: rgba(255, 255, 255, .18);
+}
+
+/* Bereichs- und Ansichtsauswahl (Kontakt/Unternehmen/Deal + Stage) */
+.sb-wahl {
+  background: rgba(255, 255, 255, .08); color: #fff;
+  border: 1px solid rgba(255, 255, 255, .18); border-radius: 5px;
+  padding: 5px 8px; font-family: inherit; font-size: 12.5px;
+  max-width: 190px; cursor: pointer;
+}
+.sb-wahl--breit { max-width: 320px; }
+.sb-wahl:hover { background: rgba(255, 255, 255, .16); }
+.sb-wahl option, .sb-wahl optgroup { background: #fff; color: #1b2733; }
+.sb-wahl optgroup { font-style: normal; font-weight: 600; }
+
+/* Fokus-Modus: Mitte und rechts abdunkeln, linke Spalte bleibt klar */
+body.sb-fokus .hs-col--mitte,
+body.sb-fokus .hs-col--rechts {
+  filter: grayscale(1);
+  opacity: .35;
+  transition: filter .18s ease, opacity .18s ease;
+}
+body.sb-fokus .hs-col--mitte:hover,
+body.sb-fokus .hs-col--rechts:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* ------------------------------------------------------- Vergleichsseite
+   Raster: links die Kartenbezeichnung, dann je Segment eine Spalte. Karten mit
+   derselben Bezeichnung liegen auf derselben Zeile und haben dieselbe Farbe
+   (Linie am linken Rand + getönter Kopf) – so sieht man die Paare sofort. */
+.sb-vergleich {
+  display: grid;
+  gap: 8px 10px;
+  padding: 12px 12px 32px 4px;
+  align-items: start;
+  overflow-x: auto;
+}
+.sb-vergleich__zelle { min-width: 0; }
+.sb-vergleich__ecke,
+.sb-vergleich__kopf {
+  position: sticky; top: 0; z-index: 6;
+  background: var(--hs-canvas, #f5f8fa);
+  padding: 6px 4px 8px;
+  border-bottom: 1px solid var(--hs-border, #dfe3e8);
+}
+.sb-vergleich__ecke { z-index: 7; }
+.sb-vergleich__ecke-titel { font-weight: 600; font-size: 13px; }
+.sb-vergleich__ecke-unter,
+.sb-vergleich__meta { color: var(--hs-text-3, #7c98b6); font-size: 11px; }
+.sb-vergleich__kopfzeile { display: flex; align-items: baseline; gap: 8px; }
+.sb-vergleich__id {
+  font-size: 11px; font-weight: 600; letter-spacing: .4px;
+  padding: 1px 6px; border-radius: 8px;
+  background: rgba(31, 122, 118, .12); color: #1f7a76;
+}
+.sb-vergleich__meta { margin-left: auto; }
+.sb-vergleich__titel { font-size: 13px; font-weight: 600; margin-top: 3px; }
+.sb-vergleich__karte .hs-card { border-left: 4px solid transparent; }
+
+/* Zeilenkopf: Kartenbezeichnung + interner Name + Bedingung */
+.sb-vergleich__zeile-kopf {
+  padding: 10px 10px 10px 12px;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid var(--hs-border, #dfe3e8);
+  border-left-width: 4px;
+  position: sticky; left: 0; z-index: 4;
+}
+.sb-vergleich__zeilenname { font-weight: 600; font-size: 13px; }
+.sb-vergleich__zeilenmeta { font-size: 11px; color: var(--hs-text-3, #7c98b6); }
+.sb-vergleich__zeilenintern {
+  font-size: 11px; color: var(--hs-text-2, #516f90); margin-top: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-word;
+}
+.sb-vergleich__zeilenbed {
+  font-size: 11px; color: #1f7a76; margin-top: 2px; word-break: break-word;
+}
+.sb-vergleich__leer { color: var(--hs-text-3, #7c98b6); font-size: 12px; padding: 8px 4px; }
+.sb-vergleich__farbe-0 { border-left-color: #2f6f9f; }
+.sb-vergleich__farbe-1 { border-left-color: #1f7a76; }
+.sb-vergleich__farbe-2 { border-left-color: #b8502f; }
+.sb-vergleich__farbe-3 { border-left-color: #7a5ca8; }
+.sb-vergleich__farbe-4 { border-left-color: #b08a1e; }
+.sb-vergleich__farbe-5 { border-left-color: #3f7d3a; }
+.sb-vergleich__farbe-6 { border-left-color: #a13a6b; }
+.sb-vergleich__farbe-7 { border-left-color: #4a5b6b; }
+.sb-vergleich__farbe-8 { border-left-color: #8a5a2b; }
+.sb-vergleich__farbe-9 { border-left-color: #2e7d5b; }
+.sb-vergleich__farbe-10 { border-left-color: #a34a1e; }
+.sb-vergleich__farbe-11 { border-left-color: #5c6e2a; }
+.sb-vergleich__farbe-0 .hs-abschnitt__kopf { background: rgba(47, 111, 159, .07); }
+.sb-vergleich__farbe-1 .hs-abschnitt__kopf { background: rgba(31, 122, 118, .07); }
+.sb-vergleich__farbe-2 .hs-abschnitt__kopf { background: rgba(184, 80, 47, .07); }
+.sb-vergleich__farbe-3 .hs-abschnitt__kopf { background: rgba(122, 92, 168, .07); }
+.sb-vergleich__farbe-4 .hs-abschnitt__kopf { background: rgba(176, 138, 30, .09); }
+.sb-vergleich__farbe-5 .hs-abschnitt__kopf { background: rgba(63, 125, 58, .07); }
+.sb-vergleich__farbe-6 .hs-abschnitt__kopf { background: rgba(161, 58, 107, .07); }
+.sb-vergleich__farbe-7 .hs-abschnitt__kopf { background: rgba(74, 91, 107, .07); }
+.sb-vergleich__farbe-8 .hs-abschnitt__kopf { background: rgba(138, 90, 43, .07); }
+.sb-vergleich__farbe-9 .hs-abschnitt__kopf { background: rgba(46, 125, 91, .07); }
+.sb-vergleich__farbe-10 .hs-abschnitt__kopf { background: rgba(163, 74, 30, .07); }
+.sb-vergleich__farbe-11 .hs-abschnitt__kopf { background: rgba(92, 110, 42, .08); }
+/* Farbe mehrfach vergeben (mehr Karten als Farben) → gestrichelter Balken */
+.sb-vergleich__farbe--doppelt { border-left-style: dashed; }
+
+/* Bedingungen/Angaben sitzen in einer eigenen Zeile unter dem Titel – im Flex-Kopf
+   würden sie sonst auf ~140 px zusammengedrückt und dreimal so hoch umbrechen. */
+.hs-abschnitt__kopf { flex-wrap: wrap; }
+.hs-karte__meta { flex: 1 1 100%; }
+
+/* Schalter «Bedingungen»: Angaben unter dem Kartentitel ausblenden (Schalter in der Leiste) */
+body.sb-ohne-bedingung .hs-karte__meta { display: none; }
+
+/* Kopfzeile in den Karten: Anzahl + strukturierte Angaben unter dem Titel */
+.hs-karte__zahl { font-size: 12px; color: var(--hs-text-3, #7c98b6); font-weight: 500; }
+/* Künftiger Name aus dem Datenmodell: heutiger Name klein daneben */
+.hs-feld__umbenannt {
+  display: inline-block; margin-left: 6px;
+  font-size: 10px; font-weight: 400; color: var(--hs-text-3, #7c98b6);
+  background: #eef2f6; border-radius: 3px; padding: 0 4px;
+}
+.hs-karte__intern {
+  font-size: 11px; color: var(--hs-text-3, #7c98b6); font-weight: 400;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.hs-karte__meta {
+  padding: 2px 14px 10px 30px;
+  font-size: 11px; color: var(--hs-text-2, #516f90); line-height: 1.35;
+}
+.hs-karte__meta--treu { color: #b8502f; }
+
+/* Label/Wert-Raster – damit die Angaben lesbar bleiben (kein Fliesstext).
+   Label über dem Wert: in der schmalen linken Spalte (~300 px) würde eine
+   zweispaltige Anordnung den Wert auf ein paar Zeichen zusammenquetschen. */
+.hs-karte__info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.hs-karte__info-k {
+  display: block;
+  font-size: 9.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--hs-text-3, #7c98b6);
+  line-height: 1.2;
+}
+.hs-karte__info-w {
+  display: block;
+  font-size: 11.5px; color: var(--hs-text, #33475b); line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.hs-karte__variante {
+  margin-top: 7px; padding: 7px 10px 8px;
+  border-left: 3px solid #c99a2e; border-radius: 0 5px 5px 0;
+  background: #fdf8ea;
+}
+.hs-karte__variante-kopf {
+  font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: #8a6a15; margin-bottom: 5px;
+}
+
+/* ------------------------------------------------------------------ Feldmodus
+   Eigenschaften hinzufügen («+ Feld hinzufügen») und entfernen («×»). */
+body.sb-feldmodus .hs-col--links .hs-feld,
+body.sb-feldmodus .sb-vergleich .hs-feld {
+  position: relative;
+  padding-right: 26px;
+  border-radius: 4px;
+}
+body.sb-feldmodus .hs-col--links .hs-feld:hover,
+body.sb-feldmodus .sb-vergleich .hs-feld:hover {
+  background: rgba(224, 96, 60, .06);
+  box-shadow: 0 0 0 1px rgba(224, 96, 60, .35);
+}
+body.sb-feldmodus .hs-col--links .hs-feld--neu .hs-feld__label,
+body.sb-feldmodus .sb-vergleich .hs-feld--neu .hs-feld__label { color: var(--hs-teal, #1f7a76); }
+body.sb-feldmodus .hs-col--links .hs-feld--neu,
+body.sb-feldmodus .sb-vergleich .hs-feld--neu { box-shadow: 0 0 0 1px rgba(31, 122, 118, .45); }
+
+.sb-feld-weg { display: none; }
+body.sb-feldmodus .sb-feld-weg {
+  display: flex; align-items: center; justify-content: center;
+  position: absolute; top: 50%; right: 4px; transform: translateY(-50%);
+  width: 18px; height: 18px; padding: 0; cursor: pointer;
+  border: 1px solid rgba(224, 96, 60, .5); border-radius: 50%;
+  background: #fff; color: #c0392b; font-size: 13px; line-height: 1;
+}
+body.sb-feldmodus .sb-feld-weg:hover { background: #c0392b; color: #fff; border-color: #c0392b; }
+
+.sb-feld-add { display: none; }
+body.sb-feldmodus .sb-feld-add {
+  display: block; width: 100%; margin-top: 6px; padding: 6px 10px;
+  cursor: pointer; text-align: left;
+  border: 1px dashed rgba(31, 122, 118, .55); border-radius: 5px;
+  background: rgba(31, 122, 118, .04); color: var(--hs-teal, #1f7a76);
+  font-family: inherit; font-size: 12.5px;
+}
+body.sb-feldmodus .sb-feld-add:hover { background: rgba(31, 122, 118, .1); }
+body.sb-feldmodus .sb-feld-add--ende { margin: 10px 0 0; text-align: center; }
+/* Auswahl-Fenster (Feldkatalog) */
+.sb-picker-huelle {
+  position: fixed; inset: 0; z-index: 60;
+  background: rgba(15, 32, 42, .35);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 70px 16px 24px;
+}
+.sb-picker {
+  width: min(680px, 100%); max-height: 78vh; display: flex; flex-direction: column;
+  background: #fff; border-radius: 10px; box-shadow: 0 12px 40px rgba(0, 0, 0, .3);
+  overflow: hidden;
+}
+.sb-picker__kopf {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px 16px 10px; border-bottom: 1px solid var(--hs-border, #dfe3e8);
+}
+.sb-picker__titel { font-weight: 600; font-size: 15px; }
+.sb-picker__unter { font-size: 12px; color: var(--hs-text-2, #516f90); }
+.sb-picker__zu {
+  border: 0; background: none; cursor: pointer; font-size: 20px; line-height: 1;
+  color: var(--hs-text-3, #7c98b6); padding: 2px 6px;
+}
+.sb-picker__zu:hover { color: #c0392b; }
+.sb-picker__suche {
+  margin: 10px 16px; padding: 8px 10px; font-family: inherit; font-size: 13px;
+  border: 1px solid var(--hs-border, #dfe3e8); border-radius: 6px;
+}
+.sb-picker__karte {
+  margin: 12px 16px 0; padding: 7px 8px; font-family: inherit; font-size: 13px;
+  border: 1px solid var(--hs-border, #dfe3e8); border-radius: 6px; background: #fff;
+  font-weight: 500;
+}
+.sb-picker__suche:focus { outline: none; border-color: var(--hs-teal, #1f7a76); }
+.sb-picker__liste { overflow: auto; padding: 0 8px 8px; }
+.sb-picker__zeile {
+  display: flex; align-items: baseline; gap: 8px; width: 100%; text-align: left;
+  padding: 7px 8px; border: 0; border-radius: 5px; background: none;
+  font-family: inherit; font-size: 13px; cursor: pointer; color: inherit;
+}
+.sb-picker__zeile:hover { background: rgba(31, 122, 118, .08); }
+.sb-picker__label { flex: 0 1 auto; font-weight: 500; }
+.sb-picker__intern { color: var(--hs-text-3, #7c98b6); font-size: 11.5px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.sb-picker__gruppe { margin-left: auto; color: var(--hs-text-3, #7c98b6); font-size: 11px; white-space: nowrap; }
+.sb-picker__abzeichen {
+  font-size: 10.5px; padding: 1px 6px; border-radius: 8px; white-space: nowrap;
+  background: rgba(31, 122, 118, .12); color: #1f7a76;
+}
+.sb-picker__abzeichen--neu { background: rgba(224, 96, 60, .14); color: #b8502f; }
+.sb-picker__abzeichen--andere { background: rgba(45, 62, 80, .1); color: #45596e; }
+.sb-picker__leer, .sb-picker__fuss {
+  padding: 10px 16px; font-size: 12px; color: var(--hs-text-2, #516f90);
+}
+.sb-picker__fuss { border-top: 1px solid var(--hs-border, #dfe3e8); }
+
+.sb-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 11px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, .24);
+  background: rgba(255, 255, 255, .06);
+  color: #e8eef2;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+.sb-btn:hover { background: rgba(255, 255, 255, .14); }
+.sb-btn--aktiv {
+  background: var(--hs-orange); border-color: var(--hs-orange); color: #fff;
+}
+.sb-btn--primaer { background: var(--hs-teal-dark); border-color: var(--hs-teal-dark); color: #fff; }
+.sb-btn--primaer:hover { background: #00a394; }
+
+.sb-schalter {
+  display: inline-flex; align-items: center; gap: 7px;
+  cursor: pointer; white-space: nowrap;
+  color: #cbd8e0;
+}
+.sb-schalter input { accent-color: var(--hs-teal); width: 15px; height: 15px; }
+
+/* Zahl der offenen Änderungen */
+.sb-zaehler {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 20px; height: 20px; padding: 0 5px;
+  border-radius: 999px; background: var(--hs-orange); color: #fff;
+  font-size: 11px; font-weight: 700;
+}
+
+/* ---------- 2. Änderungs-Marker ------------------------------------------- */
+.sb-mark {
+  position: absolute;
+  top: -9px;
+  left: -11px;
+  z-index: 20;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--hs-orange);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 1px 4px rgba(45, 62, 80, .3);
+  border: 2px solid #fff;
+  cursor: pointer;
+  font-family: var(--hs-font);
+  padding: 0;
+}
+.sb-mark:hover { transform: scale(1.12); }
+
+/* Zweiter, dritter … Vorschlag zur selben Karte */
+.sb-mark--gestapelt { left: 12px; }
+.sb-mark--gestapelt2 { left: 35px; }
+.sb-mark--gestapelt3 { left: 58px; }
+
+.sb-mark-target { position: relative; }
+
+/* An einzelnen Feldern sitzt der Marker rechts oben. Das Feld bekommt dafür
+   etwas Innenabstand, damit die Beschriftung lesbar bleibt. */
+.hs-feld { position: relative; }
+.sb-mark-feld { padding-right: 22px; }
+.sb-mark-feld > .sb-mark { left: auto; right: -8px; top: -8px; }
+.hs-activity > .sb-mark,
+.hs-eintrag > .sb-mark { left: -8px; top: -8px; }
+
+.sb-markiert {
+  box-shadow: 0 0 0 2px rgba(255, 122, 89, .55), var(--hs-shadow) !important;
+  border-radius: var(--hs-radius);
+}
+
+/* ---------- 2b. Felder verschieben (Reihenfolge) -------------------------- */
+.hs-feld.sb-ziehbar { cursor: grab; }
+.hs-feld.sb-ziehbar:hover {
+  background: linear-gradient(90deg, rgba(0, 189, 165, .08), transparent 70%);
+  border-radius: 4px;
+}
+.hs-feld.sb-zieht { opacity: .45; outline: 2px dashed var(--hs-teal); }
+
+.sb-verschieben {
+  display: inline-flex;
+  gap: 2px;
+  margin-left: auto;
+  padding-left: 6px;
+  opacity: 0;
+  transition: opacity .12s ease;
+}
+.hs-feld:hover .sb-verschieben { opacity: 1; }
+.sb-verschieben__knopf {
+  width: 18px; height: 16px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--hs-border-2);
+  border-radius: 3px;
+  background: #fff;
+  color: var(--hs-text-2);
+  font-size: 10px; line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+.sb-verschieben__knopf:hover { background: var(--hs-teal); border-color: var(--hs-teal); color: #fff; }
+
+/* Zustandsfarben (Abnahme) */
+.sb-status-ok      { background: var(--hs-green) !important; }
+.sb-status-aendern { background: var(--hs-yellow) !important; color: #5b4400 !important; }
+.sb-status-nein    { background: #516f90 !important; }
+
+/* ---------- 3. Drawer (rechts) -------------------------------------------- */
+.sb-drawer {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: 420px;
+  max-width: 92vw;
+  background: #fff;
+  border-left: 1px solid var(--hs-border);
+  box-shadow: -6px 0 24px rgba(45, 62, 80, .18);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--hs-font);
+  color: var(--hs-text);
+  transform: translateX(102%);
+  transition: transform .18s ease;
+  visibility: hidden;
+}
+.sb-drawer--offen { transform: translateX(0); visibility: visible; }
+
+.sb-drawer__kopf {
+  display: flex; align-items: center; gap: 8px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--hs-border);
+  background: #f7f9fb;
+}
+.sb-drawer__kopf h2 { margin: 0; font-size: 15px; font-weight: 600; }
+.sb-drawer__koerper { flex: 1 1 auto; overflow-y: auto; padding: 12px 16px 24px; }
+.sb-drawer__fuss {
+  border-top: 1px solid var(--hs-border);
+  padding: 10px 16px;
+  display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
+  background: #f7f9fb;
+}
+.sb-drawer__fuss .sb-btn { font-size: 12px; padding: 6px 9px; }
+
+.sb-eintrag {
+  border: 1px solid var(--hs-border);
+  border-radius: var(--hs-radius);
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+.sb-eintrag--ok      { border-color: #b6e6cd; background: #f4fdf8; }
+.sb-eintrag--aendern { border-color: #f4dda8; background: #fffbf0; }
+.sb-eintrag--nein    { border-color: var(--hs-border-2); background: #f7f9fb; }
+
+.sb-eintrag__kopf { display: flex; gap: 8px; align-items: baseline; }
+.sb-eintrag__nr {
+  flex: 0 0 auto;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--hs-orange); color: #fff;
+  font-size: 11px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.sb-eintrag--ok      .sb-eintrag__nr { background: var(--hs-green); }
+.sb-eintrag--aendern .sb-eintrag__nr { background: var(--hs-yellow); color: #5b4400; }
+.sb-eintrag--nein    .sb-eintrag__nr { background: #516f90; }
+
+.sb-eintrag__titel { font-weight: 600; font-size: 13.5px; flex: 1 1 auto; }
+.sb-eintrag__text { margin: 6px 0 0; font-size: 13px; color: var(--hs-text-2); }
+.sb-eintrag__ziel {
+  margin-top: 6px; font-size: 11.5px; color: var(--hs-text-3);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.sb-eintrag__frage { margin: 10px 0 6px; font-size: 12px; color: var(--hs-text-2); }
+
+.sb-statusbtn {
+  display: inline-flex; align-items: center; gap: 5px;
+  border: 1px solid var(--hs-border-2);
+  background: #fff;
+  border-radius: 5px;
+  padding: 4px 9px;
+  font-size: 12px;
+  color: var(--hs-text);
+}
+.sb-statusbtn:hover { background: var(--hs-hover); }
+.sb-statusbtn--aktiv { border-color: var(--hs-text); box-shadow: inset 0 0 0 1px var(--hs-text); }
+.sb-statusbtn--ok.sb-statusbtn--aktiv { background: #e8f8ef; border-color: var(--hs-green); box-shadow: none; }
+.sb-statusbtn--aendern.sb-statusbtn--aktiv { background: #fff5dd; border-color: #e0b64f; box-shadow: none; }
+.sb-statusbtn--nein.sb-statusbtn--aktiv { background: #eef2f7; border-color: #516f90; box-shadow: none; }
+
+.sb-kommentar {
+  width: 100%;
+  border: 1px solid var(--hs-border-2);
+  border-radius: 5px;
+  padding: 6px 8px;
+  font: inherit;
+  font-size: 13px;
+  resize: vertical;
+  min-height: 34px;
+  color: var(--hs-text);
+}
+.sb-kommentar:focus { outline: 2px solid var(--hs-teal); outline-offset: 1px; }
+
+.sb-leer { color: var(--hs-text-2); font-size: 13px; }
+
+/* ---------- 4. Kurz-Hinweis (Toast) --------------------------------------- */
+.sb-hinweis {
+  position: fixed;
+  left: 50%; bottom: 24px;
+  transform: translateX(-50%);
+  background: #22333f; color: #fff;
+  padding: 9px 16px; border-radius: 999px;
+  font-family: var(--hs-font); font-size: 13px;
+  z-index: 80;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+  opacity: 0; transition: opacity .15s ease;
+  pointer-events: none;
+}
+.sb-hinweis--an { opacity: 1; }
+
+/* ---------- 5. Clean-Modus ------------------------------------------------- */
+body.sb-clean .sb-bar { display: none; }
+body.sb-clean { --sb-h: 0px; }
+
+/* Marker ausgeblendet → die orangen Rahmen verschwinden mit, damit die
+   Ansicht im Screenshot-Modus exakt wie HubSpot aussieht. */
+body.sb-marker-aus .sb-mark { display: none; }
+body.sb-marker-aus .sb-markiert {
+  box-shadow: var(--hs-shadow) !important;
+}
+body.sb-marker-aus .sb-mark-feld { padding-right: 0; }
+
+/* ---------- 5b. Pur-Modus (Freigabe-Link `?pur=1`) ------------------------ */
+/* Nur die Karten: keine Leiste, kein Drawer, keine Hinweise, nichts abgedunkelt.
+   Zum Weitergeben an andere Personen – Navigation über die Fusszeile. */
+body.sb-clean .sb-drawer,
+body.sb-clean .sb-hinweis,
+body.sb-clean .sb-feldmodus-hinweis { display: none !important; }
+body.sb-ohne-puls .sb-mark { display: none !important; }
+
+/* ---------- 5c. Fusszeile: wo bin ich / was kommt als Nächstes ------------- */
+.sb-fuss {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  margin-top: 22px;
+  padding: 14px 22px 22px;
+  border-top: 1px solid #dfe5ec;
+  font-family: var(--hs-font);
+  font-size: 13px;
+  color: #516f90;
+}
+.sb-fuss__ort { font-weight: 500; color: #33475b; }
+.sb-fuss__nav { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.sb-fuss__link {
+  color: #0b5cad;
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid #cbd6e2;
+  border-radius: 4px;
+  background: #fff;
+}
+.sb-fuss__link:hover { background: #eaf3fc; border-color: #0b5cad; }
+.sb-fuss__vergleich { color: #7c3aed; border-color: #d6c6f5; }
+.sb-fuss__vergleich:hover { background: #f4eefe; border-color: #7c3aed; }
+
+/* ---------- 6. Druck ------------------------------------------------------ */
+@media print {
+  .sb-bar, .sb-drawer, .sb-hinweis, .sb-fuss { display: none !important; }
+}

@@ -1,0 +1,1638 @@
+{
+  "portal": 26786204,
+  "gelesen": "2026-09-23T10:30:16",
+  "eigene_felder": 118,
+  "typen": {
+    "Nurse-Bewerbung": {
+      "wert": "Nurse",
+      "kontakte": 1214,
+      "geprueft": 300,
+      "in_gebrauch": 22,
+      "selten": 16,
+      "erst_spaeter": 29,
+      "ohne_daten": 51,
+      "themen": {
+        "Person": [
+          {
+            "label": "Anrede_korrekt",
+            "name": "anrede",
+            "fuell_prozent": 57,
+            "gesamt_prozent": 82
+          },
+          {
+            "label": "Ansprache",
+            "name": "ansprache",
+            "fuell_prozent": 57,
+            "gesamt_prozent": 82
+          }
+        ],
+        "Kontaktweg & Adresse": [
+          {
+            "label": "Kanton",
+            "name": "kanton",
+            "fuell_prozent": 33,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Wohnregion",
+            "name": "wohnregion",
+            "fuell_prozent": 9,
+            "gesamt_prozent": null
+          }
+        ],
+        "Segmentierung & Status": [
+          {
+            "label": "Kontakt-Typ",
+            "name": "audience",
+            "fuell_prozent": 100,
+            "gesamt_prozent": 99
+          }
+        ],
+        "Marketing & Herkunft": [
+          {
+            "label": "last_utm_campaign",
+            "name": "utm_campaign",
+            "fuell_prozent": 29,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "last_utm_content",
+            "name": "utm_content",
+            "fuell_prozent": 29,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "last_utm_medium",
+            "name": "utm_medium",
+            "fuell_prozent": 29,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "last_utm_source",
+            "name": "utm_source",
+            "fuell_prozent": 29,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "last_utm_adset",
+            "name": "utm_adset",
+            "fuell_prozent": 28,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Abfrage Pflegende",
+            "name": "abfrage_pflegende",
+            "fuell_prozent": 25,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Lead assoziiert",
+            "name": "lead_associated",
+            "fuell_prozent": 22,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "CH Lead Score Simple",
+            "name": "ch_lead_score_simple",
+            "fuell_prozent": 8,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "CH Lead Score Simple engagement",
+            "name": "ch_lead_score_simple_engagement",
+            "fuell_prozent": 8,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "CH Lead Score Simple fit",
+            "name": "ch_lead_score_simple_fit",
+            "fuell_prozent": 8,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "CH Lead Score Simple threshold",
+            "name": "ch_lead_score_simple_threshold",
+            "fuell_prozent": 8,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Batch",
+            "name": "batch",
+            "fuell_prozent": 5,
+            "gesamt_prozent": 2
+          }
+        ],
+        "Systemfelder (immer gefüllt)": [
+          {
+            "label": "time to contact creation",
+            "name": "time_to_contact_creation",
+            "fuell_prozent": 100,
+            "gesamt_prozent": null
+          }
+        ],
+        "Qualifikation & Einsatz": [
+          {
+            "label": "Dienste Bereitschaft",
+            "name": "schichten_bereitschaft_neu",
+            "fuell_prozent": 9,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Schichten Bereitschaft -instant form archiv",
+            "name": "schichten_bereitschaft",
+            "fuell_prozent": 9,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Fachgebiet",
+            "name": "fachgebiet",
+            "fuell_prozent": 5,
+            "gesamt_prozent": 2
+          }
+        ],
+        "Weitere Felder": [
+          {
+            "label": "WeNurse-Empfehlung",
+            "name": "wenurse_referral",
+            "fuell_prozent": 5,
+            "gesamt_prozent": null
+          }
+        ]
+      },
+      "erst_spaeter_felder": [
+        {
+          "label": "Instagram Account Name",
+          "name": "instagram_handle",
+          "fuell_prozent": 8,
+          "gebraucht_in": "Employee (86 %)"
+        },
+        {
+          "label": "Nationalität",
+          "name": "nationalitat",
+          "fuell_prozent": 5,
+          "gebraucht_in": "Employee (100 %)"
+        },
+        {
+          "label": "Heimatort",
+          "name": "heimatort",
+          "fuell_prozent": 2,
+          "gebraucht_in": "Employee (100 %)"
+        },
+        {
+          "label": "mögliche Arbeitskantone",
+          "name": "mogliche_arbeitskantone",
+          "fuell_prozent": 1,
+          "gebraucht_in": "Employee (86 %)"
+        },
+        {
+          "label": "Fachbereich",
+          "name": "fachbereich",
+          "fuell_prozent": 11,
+          "gebraucht_in": "Employee (92 %)"
+        },
+        {
+          "label": "Grade (Diploma)",
+          "name": "grade__diploma_",
+          "fuell_prozent": 11,
+          "gebraucht_in": "Employee (92 %)"
+        },
+        {
+          "label": "Pensum in %",
+          "name": "pensum_in__",
+          "fuell_prozent": 11,
+          "gebraucht_in": "Employee (96 %)"
+        },
+        {
+          "label": "Pensum (pandadoc)",
+          "name": "pensum_pandadoc",
+          "fuell_prozent": 9,
+          "gebraucht_in": "Employee (96 %)"
+        },
+        {
+          "label": "Max. Reisezeit pro Weg",
+          "name": "max__reisezeit_pro_weg",
+          "fuell_prozent": 7,
+          "gebraucht_in": "Employee (78 %)"
+        },
+        {
+          "label": "Dienste Kommentar",
+          "name": "schichten",
+          "fuell_prozent": 6,
+          "gebraucht_in": "Employee (73 %)"
+        },
+        {
+          "label": "Präferenz Anfahrt",
+          "name": "praferenz_anfahrt",
+          "fuell_prozent": 6,
+          "gebraucht_in": "Employee (84 %)"
+        },
+        {
+          "label": "Anstellung Einsatz",
+          "name": "anstellung",
+          "fuell_prozent": 5,
+          "gebraucht_in": "Employee (88 %)"
+        },
+        {
+          "label": "Mitarbeiterkategorie",
+          "name": "mitarbeiterkategorie",
+          "fuell_prozent": 1,
+          "gebraucht_in": "Employee (92 %)"
+        },
+        {
+          "label": "AHV",
+          "name": "ahv",
+          "fuell_prozent": 5,
+          "gebraucht_in": "Employee (100 %)"
+        },
+        {
+          "label": "Bank",
+          "name": "bank",
+          "fuell_prozent": 5,
+          "gebraucht_in": "Employee (100 %)"
+        },
+        {
+          "label": "IBAN",
+          "name": "iban",
+          "fuell_prozent": 5,
+          "gebraucht_in": "Employee (100 %)"
+        },
+        {
+          "label": "Kinderzulagen",
+          "name": "kinderzulagen",
+          "fuell_prozent": 5,
+          "gebraucht_in": "Employee (100 %)"
+        },
+        {
+          "label": "Kontakt im Notfall",
+          "name": "kontakt_im_notfall",
+          "fuell_prozent": 5,
+          "gebraucht_in": "Employee (100 %)"
+        },
+        {
+          "label": "Stundensatz",
+          "name": "hourly_rate",
+          "fuell_prozent": 5,
+          "gebraucht_in": "Employee (90 %)"
+        },
+        {
+          "label": "Vertragsbeginndatum",
+          "name": "contract_start_date",
+          "fuell_prozent": 5,
+          "gebraucht_in": "Employee (51 %)"
+        },
+        {
+          "label": "Arbeitsfähig",
+          "name": "arbeitsfahig",
+          "fuell_prozent": 4,
+          "gebraucht_in": "Employee (86 %)"
+        },
+        {
+          "label": "Datum der Rahmenvertragserstellung",
+          "name": "date_of_sign",
+          "fuell_prozent": 4,
+          "gebraucht_in": "Employee (59 %)"
+        },
+        {
+          "label": "Eintrittsdatum",
+          "name": "entry_date",
+          "fuell_prozent": 4,
+          "gebraucht_in": "Employee (61 %)"
+        },
+        {
+          "label": "Quellensteuerpflichtig",
+          "name": "quellensteuerpflichtig",
+          "fuell_prozent": 2,
+          "gebraucht_in": "Employee (80 %)"
+        },
+        {
+          "label": "recruiting_phase",
+          "name": "recruiting_phase",
+          "fuell_prozent": 11,
+          "gebraucht_in": "Institution (100 %)"
+        },
+        {
+          "label": "Auto zur Verfügung (neu)",
+          "name": "auto_zur_verfugung_neu",
+          "fuell_prozent": 6,
+          "gebraucht_in": "Employee (86 %)"
+        },
+        {
+          "label": "Auto zur Verfügung Kommentar",
+          "name": "auto_zur_verfugung",
+          "fuell_prozent": 6,
+          "gebraucht_in": "Employee (71 %)"
+        },
+        {
+          "label": "Gut zu wissen",
+          "name": "gut_zu_wissen",
+          "fuell_prozent": 4,
+          "gebraucht_in": "Employee (55 %)"
+        },
+        {
+          "label": "Warst du mehr als 4 Wochen arbeitsunfähig in den letzten 5 Jahren am Stuck?",
+          "name": "mehr_als_4_wochen_arbeitsunfahig_in_den_letzten_5_jahren",
+          "fuell_prozent": 4,
+          "gebraucht_in": "Employee (86 %)"
+        }
+      ],
+      "ohne_daten_felder": [
+        {
+          "label": "DE_Ausbildung Pflegefachperson (oder höher)",
+          "name": "de_ausbildung_pflegefachperson__oder_hoher_"
+        },
+        {
+          "label": "DE_Ausbildung als Gesundheits- und Krankenpflegerin (oder höher)",
+          "name": "de_ausbildung_als_gesundheits__und_krankenpflegerin__oder_hoher_"
+        },
+        {
+          "label": "Linkedin Account Name",
+          "name": "linkedin_handle"
+        },
+        {
+          "label": "First Touch Source (Self-Reported)",
+          "name": "first_touch_source_selfreported"
+        },
+        {
+          "label": "First Touch Source (Self-Reported) - Sonstiges",
+          "name": "first_touch_source_selfreported__sonstiges"
+        },
+        {
+          "label": "Ich komme aus der Region Bern!",
+          "name": "ich_komme_aus_der_region_"
+        },
+        {
+          "label": "Telefonnummer 2",
+          "name": "phone_number_2"
+        },
+        {
+          "label": "Pensum Backoffice",
+          "name": "pensum_backoffice"
+        },
+        {
+          "label": "Abwesenheiten anfang 1",
+          "name": "abwesenheiten_anfang_1"
+        },
+        {
+          "label": "Abwesenheiten ende 1",
+          "name": "abwesenheiten_ende_1"
+        },
+        {
+          "label": "Aufenthaltsbewilligung - Gültig ab",
+          "name": "aufenthaltsbewilligung__gultig_ab"
+        },
+        {
+          "label": "Auto Führerausweis",
+          "name": "auto_fuhrerausweis"
+        },
+        {
+          "label": "Ferienanfang 1",
+          "name": "ferienanfang_1"
+        },
+        {
+          "label": "Ferienanfang 2",
+          "name": "ferienanfang_2"
+        },
+        {
+          "label": "Ferienanfang 3",
+          "name": "ferienanfang_3"
+        },
+        {
+          "label": "Ferienende 1",
+          "name": "ferienende_1"
+        },
+        {
+          "label": "Ferienende 2",
+          "name": "ferienende_2"
+        },
+        {
+          "label": "Ferienende 3",
+          "name": "ferienende_3"
+        },
+        {
+          "label": "Aktueller-Arbeitsbereich (Leads)",
+          "name": "aktueller_arbeitsbereich__leads_"
+        },
+        {
+          "label": "DE Leads Contact Fit Score",
+          "name": "de_leads_contact_fit_score"
+        },
+        {
+          "label": "DE Leads Contact Fit Score threshold",
+          "name": "de_leads_contact_fit_score_threshold"
+        },
+        {
+          "label": "Opted out of email: CH WeNurse Updates",
+          "name": "hs_email_optout_895571662"
+        },
+        {
+          "label": "Opted out of email: DE Marketinginformationen",
+          "name": "hs_email_optout_789507687"
+        },
+        {
+          "label": "Opted out of email: Gedankenblicke von Alessia",
+          "name": "hs_email_optout_2593357676"
+        },
+        {
+          "label": "Opted out of email: One to One",
+          "name": "hs_email_optout_165753134"
+        },
+        {
+          "label": "Opted out of email: WhatsApp",
+          "name": "hs_email_optout_290609267"
+        },
+        {
+          "label": "Opted out of email: careköniz Informationen",
+          "name": "hs_email_optout_1057180583"
+        },
+        {
+          "label": "Social Media Vorstellung",
+          "name": "social_media_vorstellung"
+        },
+        {
+          "label": "first_utm_adset",
+          "name": "first_utm_adset"
+        },
+        {
+          "label": "first_utm_campaign",
+          "name": "first_utm_campaign"
+        },
+        {
+          "label": "first_utm_content",
+          "name": "first_utm_content"
+        },
+        {
+          "label": "first_utm_medium",
+          "name": "first_utm_medium"
+        },
+        {
+          "label": "first_utm_source",
+          "name": "first_utm_source"
+        },
+        {
+          "label": "first_utm_term",
+          "name": "first_utm_term"
+        },
+        {
+          "label": "last_utm_term",
+          "name": "utm_term"
+        },
+        {
+          "label": "utm_form_combined",
+          "name": "utm_field_combined"
+        },
+        {
+          "label": "Advisor",
+          "name": "advisor"
+        },
+        {
+          "label": "Anstellung Backoffice",
+          "name": "anstellung_backoffice"
+        },
+        {
+          "label": "Anzahl Kinder",
+          "name": "anzahl_kinder"
+        },
+        {
+          "label": "Arbeitsposition",
+          "name": "arbeitsposition"
+        },
+        {
+          "label": "Event-Datum",
+          "name": "event_datum"
+        },
+        {
+          "label": "Ich habe schon in der Schweiz gearbeitet",
+          "name": "ich_habe_schon_in_der_schweiz_gearbeitet"
+        },
+        {
+          "label": "Invest-Stages",
+          "name": "invest_stages"
+        },
+        {
+          "label": "Kinder",
+          "name": "kinder"
+        },
+        {
+          "label": "Nachricht (Nicht-Hubspot-Formular)",
+          "name": "message_nonhubspot_form"
+        },
+        {
+          "label": "Operativer Start",
+          "name": "operativer_start"
+        },
+        {
+          "label": "Seed-Round (2026Q2)",
+          "name": "seedround_2026q2"
+        },
+        {
+          "label": "Seed-Round (2026Q2) - Kommentar",
+          "name": "seedround_2026q2__kommentar"
+        },
+        {
+          "label": "Staatsbürgerschaft",
+          "name": "staatsburgerschaft"
+        },
+        {
+          "label": "TeamleiterIn",
+          "name": "teamleiterin"
+        },
+        {
+          "label": "Was ist dir lieber?",
+          "name": "was_ist_dir_lieber_"
+        }
+      ]
+    },
+    "Institution": {
+      "wert": "Institution",
+      "kontakte": 1098,
+      "geprueft": 300,
+      "in_gebrauch": 7,
+      "selten": 9,
+      "erst_spaeter": 0,
+      "ohne_daten": 102,
+      "themen": {
+        "Person": [
+          {
+            "label": "Anrede_korrekt",
+            "name": "anrede",
+            "fuell_prozent": 96,
+            "gesamt_prozent": 82
+          },
+          {
+            "label": "Ansprache",
+            "name": "ansprache",
+            "fuell_prozent": 96,
+            "gesamt_prozent": 82
+          }
+        ],
+        "Kontaktweg & Adresse": [
+          {
+            "label": "Kanton",
+            "name": "kanton",
+            "fuell_prozent": 98,
+            "gesamt_prozent": null
+          }
+        ],
+        "Segmentierung & Status": [
+          {
+            "label": "Kontakt-Typ",
+            "name": "audience",
+            "fuell_prozent": 100,
+            "gesamt_prozent": 99
+          },
+          {
+            "label": "recruiting_phase",
+            "name": "recruiting_phase",
+            "fuell_prozent": 100,
+            "gesamt_prozent": 76
+          }
+        ],
+        "Systemfelder (immer gefüllt)": [
+          {
+            "label": "time to contact creation",
+            "name": "time_to_contact_creation",
+            "fuell_prozent": 100,
+            "gesamt_prozent": null
+          }
+        ],
+        "Qualifikation & Einsatz": [
+          {
+            "label": "Job Kategorie",
+            "name": "job_kategorie",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          }
+        ]
+      },
+      "erst_spaeter_felder": [],
+      "ohne_daten_felder": [
+        {
+          "label": "DE_Ausbildung Pflegefachperson (oder höher)",
+          "name": "de_ausbildung_pflegefachperson__oder_hoher_"
+        },
+        {
+          "label": "DE_Ausbildung als Gesundheits- und Krankenpflegerin (oder höher)",
+          "name": "de_ausbildung_als_gesundheits__und_krankenpflegerin__oder_hoher_"
+        },
+        {
+          "label": "Datum Zivilstand",
+          "name": "datum_zivilstand"
+        },
+        {
+          "label": "Instagram Account Name",
+          "name": "instagram_handle"
+        },
+        {
+          "label": "Linkedin Account Name",
+          "name": "linkedin_handle"
+        },
+        {
+          "label": "Nationalität",
+          "name": "nationalitat"
+        },
+        {
+          "label": "Zusatzweiterbildung vorhanden (Leads)",
+          "name": "zusatzweiterbildung_vorhanden"
+        },
+        {
+          "label": "Zusatzweiterbildung-Spezifisch (Leads)",
+          "name": "zusatzweiterbildung_spezifisch__leads_"
+        },
+        {
+          "label": "First Touch Source (Self-Reported)",
+          "name": "first_touch_source_selfreported"
+        },
+        {
+          "label": "First Touch Source (Self-Reported) - Sonstiges",
+          "name": "first_touch_source_selfreported__sonstiges"
+        },
+        {
+          "label": "Heimatort",
+          "name": "heimatort"
+        },
+        {
+          "label": "Ich komme aus der Region Bern!",
+          "name": "ich_komme_aus_der_region_"
+        },
+        {
+          "label": "Telefonnummer 2",
+          "name": "phone_number_2"
+        },
+        {
+          "label": "Wohnregion",
+          "name": "wohnregion"
+        },
+        {
+          "label": "mögliche Arbeitskantone",
+          "name": "mogliche_arbeitskantone"
+        },
+        {
+          "label": "Anstellung Einsatz",
+          "name": "anstellung"
+        },
+        {
+          "label": "Berufserfahrung Pflege (Leads)",
+          "name": "berufserfahrung_pflege__leads_"
+        },
+        {
+          "label": "Dienste Bereitschaft",
+          "name": "schichten_bereitschaft_neu"
+        },
+        {
+          "label": "Dienste Kommentar",
+          "name": "schichten"
+        },
+        {
+          "label": "Fachbereich",
+          "name": "fachbereich"
+        },
+        {
+          "label": "Fachgebiet",
+          "name": "fachgebiet"
+        },
+        {
+          "label": "Grade (Diploma)",
+          "name": "grade__diploma_"
+        },
+        {
+          "label": "Max. Reisezeit pro Weg",
+          "name": "max__reisezeit_pro_weg"
+        },
+        {
+          "label": "Mitarbeiterkategorie",
+          "name": "mitarbeiterkategorie"
+        },
+        {
+          "label": "Pensum (pandadoc)",
+          "name": "pensum_pandadoc"
+        },
+        {
+          "label": "Pensum Backoffice",
+          "name": "pensum_backoffice"
+        },
+        {
+          "label": "Pensum in %",
+          "name": "pensum_in__"
+        },
+        {
+          "label": "Präferenz Anfahrt",
+          "name": "praferenz_anfahrt"
+        },
+        {
+          "label": "Schichten Bereitschaft -instant form archiv",
+          "name": "schichten_bereitschaft"
+        },
+        {
+          "label": "Verfügbar ab (Datum)",
+          "name": "verfugbar_ab_datum"
+        },
+        {
+          "label": "Wochentage Bereitschaft",
+          "name": "wochentage_bereitschaft"
+        },
+        {
+          "label": "AHV",
+          "name": "ahv"
+        },
+        {
+          "label": "Abwesenheiten anfang 1",
+          "name": "abwesenheiten_anfang_1"
+        },
+        {
+          "label": "Abwesenheiten ende 1",
+          "name": "abwesenheiten_ende_1"
+        },
+        {
+          "label": "Arbeitsfähig",
+          "name": "arbeitsfahig"
+        },
+        {
+          "label": "Aufenthaltsbewilligung",
+          "name": "aufenthaltsbewilligung"
+        },
+        {
+          "label": "Aufenthaltsbewilligung - Gültig ab",
+          "name": "aufenthaltsbewilligung__gultig_ab"
+        },
+        {
+          "label": "Austrittsdatum",
+          "name": "austrittsdatum"
+        },
+        {
+          "label": "Auto Führerausweis",
+          "name": "auto_fuhrerausweis"
+        },
+        {
+          "label": "Bank",
+          "name": "bank"
+        },
+        {
+          "label": "Datum der Rahmenvertragserstellung",
+          "name": "date_of_sign"
+        },
+        {
+          "label": "Eintrittsdatum",
+          "name": "entry_date"
+        },
+        {
+          "label": "Ferienanfang 1",
+          "name": "ferienanfang_1"
+        },
+        {
+          "label": "Ferienanfang 2",
+          "name": "ferienanfang_2"
+        },
+        {
+          "label": "Ferienanfang 3",
+          "name": "ferienanfang_3"
+        },
+        {
+          "label": "Ferienende 1",
+          "name": "ferienende_1"
+        },
+        {
+          "label": "Ferienende 2",
+          "name": "ferienende_2"
+        },
+        {
+          "label": "Ferienende 3",
+          "name": "ferienende_3"
+        },
+        {
+          "label": "IBAN",
+          "name": "iban"
+        },
+        {
+          "label": "Kinderzulagen",
+          "name": "kinderzulagen"
+        },
+        {
+          "label": "Kontakt im Notfall",
+          "name": "kontakt_im_notfall"
+        },
+        {
+          "label": "Quellensteuerpflichtig",
+          "name": "quellensteuerpflichtig"
+        },
+        {
+          "label": "Stundensatz",
+          "name": "hourly_rate"
+        },
+        {
+          "label": "Vertragsbeginndatum",
+          "name": "contract_start_date"
+        },
+        {
+          "label": "Abfrage Pflegende",
+          "name": "abfrage_pflegende"
+        },
+        {
+          "label": "Aktueller-Arbeitsbereich (Leads)",
+          "name": "aktueller_arbeitsbereich__leads_"
+        },
+        {
+          "label": "Batch",
+          "name": "batch"
+        },
+        {
+          "label": "CH Lead Score Simple",
+          "name": "ch_lead_score_simple"
+        },
+        {
+          "label": "CH Lead Score Simple engagement",
+          "name": "ch_lead_score_simple_engagement"
+        },
+        {
+          "label": "CH Lead Score Simple fit",
+          "name": "ch_lead_score_simple_fit"
+        },
+        {
+          "label": "CH Lead Score Simple threshold",
+          "name": "ch_lead_score_simple_threshold"
+        },
+        {
+          "label": "DE Leads Contact Fit Score",
+          "name": "de_leads_contact_fit_score"
+        },
+        {
+          "label": "DE Leads Contact Fit Score threshold",
+          "name": "de_leads_contact_fit_score_threshold"
+        },
+        {
+          "label": "Lead assoziiert",
+          "name": "lead_associated"
+        },
+        {
+          "label": "Social Media Vorstellung",
+          "name": "social_media_vorstellung"
+        },
+        {
+          "label": "Source Drill-Down 3 (custom)",
+          "name": "source_drill_down_3__custom_"
+        },
+        {
+          "label": "Source Drill-Down 4 (custom)",
+          "name": "source_drilldown_4_custom"
+        },
+        {
+          "label": "first_utm_adset",
+          "name": "first_utm_adset"
+        },
+        {
+          "label": "first_utm_campaign",
+          "name": "first_utm_campaign"
+        },
+        {
+          "label": "first_utm_content",
+          "name": "first_utm_content"
+        },
+        {
+          "label": "first_utm_medium",
+          "name": "first_utm_medium"
+        },
+        {
+          "label": "first_utm_source",
+          "name": "first_utm_source"
+        },
+        {
+          "label": "first_utm_term",
+          "name": "first_utm_term"
+        },
+        {
+          "label": "last_utm_adset",
+          "name": "utm_adset"
+        },
+        {
+          "label": "last_utm_campaign",
+          "name": "utm_campaign"
+        },
+        {
+          "label": "last_utm_content",
+          "name": "utm_content"
+        },
+        {
+          "label": "last_utm_medium",
+          "name": "utm_medium"
+        },
+        {
+          "label": "last_utm_source",
+          "name": "utm_source"
+        },
+        {
+          "label": "last_utm_term",
+          "name": "utm_term"
+        },
+        {
+          "label": "utm_form_combined",
+          "name": "utm_field_combined"
+        },
+        {
+          "label": "utm_id",
+          "name": "utm_id"
+        },
+        {
+          "label": "Advisor",
+          "name": "advisor"
+        },
+        {
+          "label": "Angabe Nebenerwerb",
+          "name": "angabe_nebenerwerb"
+        },
+        {
+          "label": "Anstellung Backoffice",
+          "name": "anstellung_backoffice"
+        },
+        {
+          "label": "Anzahl Kinder",
+          "name": "anzahl_kinder"
+        },
+        {
+          "label": "Anzahl der Aktien",
+          "name": "number_of_shares"
+        },
+        {
+          "label": "Auto zur Verfügung (neu)",
+          "name": "auto_zur_verfugung_neu"
+        },
+        {
+          "label": "Auto zur Verfügung Kommentar",
+          "name": "auto_zur_verfugung"
+        },
+        {
+          "label": "Gut zu wissen",
+          "name": "gut_zu_wissen"
+        },
+        {
+          "label": "Ich habe schon in der Schweiz gearbeitet",
+          "name": "ich_habe_schon_in_der_schweiz_gearbeitet"
+        },
+        {
+          "label": "Invest-Stages",
+          "name": "invest_stages"
+        },
+        {
+          "label": "Kinder",
+          "name": "kinder"
+        },
+        {
+          "label": "Nachricht (Nicht-Hubspot-Formular)",
+          "name": "message_nonhubspot_form"
+        },
+        {
+          "label": "Operativer Start",
+          "name": "operativer_start"
+        },
+        {
+          "label": "Seed-Round (2026Q2)",
+          "name": "seedround_2026q2"
+        },
+        {
+          "label": "Seed-Round (2026Q2) - Kommentar",
+          "name": "seedround_2026q2__kommentar"
+        },
+        {
+          "label": "Staatsbürgerschaft",
+          "name": "staatsburgerschaft"
+        },
+        {
+          "label": "TeamleiterIn",
+          "name": "teamleiterin"
+        },
+        {
+          "label": "Warst du mehr als 4 Wochen arbeitsunfähig in den letzten 5 Jahren am Stuck?",
+          "name": "mehr_als_4_wochen_arbeitsunfahig_in_den_letzten_5_jahren"
+        },
+        {
+          "label": "Was ist dir lieber?",
+          "name": "was_ist_dir_lieber_"
+        },
+        {
+          "label": "WeNurse-Empfehlung",
+          "name": "wenurse_referral"
+        },
+        {
+          "label": "Wochentage Kommentar",
+          "name": "wochentage_kommentar"
+        }
+      ]
+    },
+    "Employee": {
+      "wert": "Employee",
+      "kontakte": 49,
+      "geprueft": 49,
+      "in_gebrauch": 78,
+      "selten": 10,
+      "erst_spaeter": 0,
+      "ohne_daten": 30,
+      "themen": {
+        "Person": [
+          {
+            "label": "Anrede_korrekt",
+            "name": "anrede",
+            "fuell_prozent": 100,
+            "gesamt_prozent": 82
+          },
+          {
+            "label": "Nationalität",
+            "name": "nationalitat",
+            "fuell_prozent": 100,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Ansprache",
+            "name": "ansprache",
+            "fuell_prozent": 96,
+            "gesamt_prozent": 82
+          },
+          {
+            "label": "Instagram Account Name",
+            "name": "instagram_handle",
+            "fuell_prozent": 86,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Datum Zivilstand",
+            "name": "datum_zivilstand",
+            "fuell_prozent": 37,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Linkedin Account Name",
+            "name": "linkedin_handle",
+            "fuell_prozent": 22,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Zusatzweiterbildung-Spezifisch (Leads)",
+            "name": "zusatzweiterbildung_spezifisch__leads_",
+            "fuell_prozent": 18,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Zusatzweiterbildung vorhanden (Leads)",
+            "name": "zusatzweiterbildung_vorhanden",
+            "fuell_prozent": 16,
+            "gesamt_prozent": null
+          }
+        ],
+        "Kontaktweg & Adresse": [
+          {
+            "label": "Heimatort",
+            "name": "heimatort",
+            "fuell_prozent": 100,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Kanton",
+            "name": "kanton",
+            "fuell_prozent": 98,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "mögliche Arbeitskantone",
+            "name": "mogliche_arbeitskantone",
+            "fuell_prozent": 86,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "First Touch Source (Self-Reported)",
+            "name": "first_touch_source_selfreported",
+            "fuell_prozent": 39,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Wohnregion",
+            "name": "wohnregion",
+            "fuell_prozent": 27,
+            "gesamt_prozent": null
+          }
+        ],
+        "Qualifikation & Einsatz": [
+          {
+            "label": "Pensum (pandadoc)",
+            "name": "pensum_pandadoc",
+            "fuell_prozent": 96,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Pensum in %",
+            "name": "pensum_in__",
+            "fuell_prozent": 96,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Fachbereich",
+            "name": "fachbereich",
+            "fuell_prozent": 92,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Grade (Diploma)",
+            "name": "grade__diploma_",
+            "fuell_prozent": 92,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Mitarbeiterkategorie",
+            "name": "mitarbeiterkategorie",
+            "fuell_prozent": 92,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Anstellung Einsatz",
+            "name": "anstellung",
+            "fuell_prozent": 88,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Präferenz Anfahrt",
+            "name": "praferenz_anfahrt",
+            "fuell_prozent": 84,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Max. Reisezeit pro Weg",
+            "name": "max__reisezeit_pro_weg",
+            "fuell_prozent": 78,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Dienste Kommentar",
+            "name": "schichten",
+            "fuell_prozent": 73,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Dienste Bereitschaft",
+            "name": "schichten_bereitschaft_neu",
+            "fuell_prozent": 49,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Wochentage Bereitschaft",
+            "name": "wochentage_bereitschaft",
+            "fuell_prozent": 45,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Fachgebiet",
+            "name": "fachgebiet",
+            "fuell_prozent": 43,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Verfügbar ab (Datum)",
+            "name": "verfugbar_ab_datum",
+            "fuell_prozent": 37,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Berufserfahrung Pflege (Leads)",
+            "name": "berufserfahrung_pflege__leads_",
+            "fuell_prozent": 31,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Schichten Bereitschaft -instant form archiv",
+            "name": "schichten_bereitschaft",
+            "fuell_prozent": 16,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Job Kategorie",
+            "name": "job_kategorie",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          }
+        ],
+        "Anstellung & Administration": [
+          {
+            "label": "AHV",
+            "name": "ahv",
+            "fuell_prozent": 100,
+            "gesamt_prozent": 3
+          },
+          {
+            "label": "Bank",
+            "name": "bank",
+            "fuell_prozent": 100,
+            "gesamt_prozent": 3
+          },
+          {
+            "label": "IBAN",
+            "name": "iban",
+            "fuell_prozent": 100,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Kinderzulagen",
+            "name": "kinderzulagen",
+            "fuell_prozent": 100,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Kontakt im Notfall",
+            "name": "kontakt_im_notfall",
+            "fuell_prozent": 100,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Stundensatz",
+            "name": "hourly_rate",
+            "fuell_prozent": 90,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Arbeitsfähig",
+            "name": "arbeitsfahig",
+            "fuell_prozent": 86,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Quellensteuerpflichtig",
+            "name": "quellensteuerpflichtig",
+            "fuell_prozent": 80,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Eintrittsdatum",
+            "name": "entry_date",
+            "fuell_prozent": 61,
+            "gesamt_prozent": 3
+          },
+          {
+            "label": "Datum der Rahmenvertragserstellung",
+            "name": "date_of_sign",
+            "fuell_prozent": 59,
+            "gesamt_prozent": 3
+          },
+          {
+            "label": "Vertragsbeginndatum",
+            "name": "contract_start_date",
+            "fuell_prozent": 51,
+            "gesamt_prozent": 3
+          },
+          {
+            "label": "Auto Führerausweis",
+            "name": "auto_fuhrerausweis",
+            "fuell_prozent": 33,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Ferienanfang 1",
+            "name": "ferienanfang_1",
+            "fuell_prozent": 33,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Ferienende 1",
+            "name": "ferienende_1",
+            "fuell_prozent": 33,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Aufenthaltsbewilligung",
+            "name": "aufenthaltsbewilligung",
+            "fuell_prozent": 31,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Ferienanfang 2",
+            "name": "ferienanfang_2",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Ferienende 2",
+            "name": "ferienende_2",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Aufenthaltsbewilligung - Gültig ab",
+            "name": "aufenthaltsbewilligung__gultig_ab",
+            "fuell_prozent": 6,
+            "gesamt_prozent": null
+          }
+        ],
+        "Segmentierung & Status": [
+          {
+            "label": "Kontakt-Typ",
+            "name": "audience",
+            "fuell_prozent": 100,
+            "gesamt_prozent": 99
+          },
+          {
+            "label": "recruiting_phase",
+            "name": "recruiting_phase",
+            "fuell_prozent": 100,
+            "gesamt_prozent": 76
+          }
+        ],
+        "Marketing & Herkunft": [
+          {
+            "label": "Lead assoziiert",
+            "name": "lead_associated",
+            "fuell_prozent": 45,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Abfrage Pflegende",
+            "name": "abfrage_pflegende",
+            "fuell_prozent": 39,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Batch",
+            "name": "batch",
+            "fuell_prozent": 24,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "last_utm_source",
+            "name": "utm_source",
+            "fuell_prozent": 20,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "last_utm_adset",
+            "name": "utm_adset",
+            "fuell_prozent": 18,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "last_utm_campaign",
+            "name": "utm_campaign",
+            "fuell_prozent": 18,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "last_utm_content",
+            "name": "utm_content",
+            "fuell_prozent": 18,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "last_utm_medium",
+            "name": "utm_medium",
+            "fuell_prozent": 18,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Aktueller-Arbeitsbereich (Leads)",
+            "name": "aktueller_arbeitsbereich__leads_",
+            "fuell_prozent": 14,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Social Media Vorstellung",
+            "name": "social_media_vorstellung",
+            "fuell_prozent": 14,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "CH Lead Score Simple",
+            "name": "ch_lead_score_simple",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "CH Lead Score Simple engagement",
+            "name": "ch_lead_score_simple_engagement",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "CH Lead Score Simple fit",
+            "name": "ch_lead_score_simple_fit",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "CH Lead Score Simple threshold",
+            "name": "ch_lead_score_simple_threshold",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Source Drill-Down 3 (custom)",
+            "name": "source_drill_down_3__custom_",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Source Drill-Down 4 (custom)",
+            "name": "source_drilldown_4_custom",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          }
+        ],
+        "Weitere Felder": [
+          {
+            "label": "Auto zur Verfügung (neu)",
+            "name": "auto_zur_verfugung_neu",
+            "fuell_prozent": 86,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Warst du mehr als 4 Wochen arbeitsunfähig in den letzten 5 Jahren am Stuck?",
+            "name": "mehr_als_4_wochen_arbeitsunfahig_in_den_letzten_5_jahren",
+            "fuell_prozent": 86,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Auto zur Verfügung Kommentar",
+            "name": "auto_zur_verfugung",
+            "fuell_prozent": 71,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Operativer Start",
+            "name": "operativer_start",
+            "fuell_prozent": 67,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "TeamleiterIn",
+            "name": "teamleiterin",
+            "fuell_prozent": 61,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Gut zu wissen",
+            "name": "gut_zu_wissen",
+            "fuell_prozent": 55,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Kinder",
+            "name": "kinder",
+            "fuell_prozent": 37,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Angabe Nebenerwerb",
+            "name": "angabe_nebenerwerb",
+            "fuell_prozent": 31,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "WeNurse-Empfehlung",
+            "name": "wenurse_referral",
+            "fuell_prozent": 27,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Wochentage Kommentar",
+            "name": "wochentage_kommentar",
+            "fuell_prozent": 24,
+            "gesamt_prozent": null
+          },
+          {
+            "label": "Anzahl der Aktien",
+            "name": "number_of_shares",
+            "fuell_prozent": 18,
+            "gesamt_prozent": 2
+          },
+          {
+            "label": "Anzahl Kinder",
+            "name": "anzahl_kinder",
+            "fuell_prozent": 12,
+            "gesamt_prozent": null
+          }
+        ],
+        "Systemfelder (immer gefüllt)": [
+          {
+            "label": "time to contact creation",
+            "name": "time_to_contact_creation",
+            "fuell_prozent": 100,
+            "gesamt_prozent": null
+          }
+        ]
+      },
+      "erst_spaeter_felder": [],
+      "ohne_daten_felder": [
+        {
+          "label": "DE_Ausbildung Pflegefachperson (oder höher)",
+          "name": "de_ausbildung_pflegefachperson__oder_hoher_"
+        },
+        {
+          "label": "DE_Ausbildung als Gesundheits- und Krankenpflegerin (oder höher)",
+          "name": "de_ausbildung_als_gesundheits__und_krankenpflegerin__oder_hoher_"
+        },
+        {
+          "label": "First Touch Source (Self-Reported) - Sonstiges",
+          "name": "first_touch_source_selfreported__sonstiges"
+        },
+        {
+          "label": "Ich komme aus der Region Bern!",
+          "name": "ich_komme_aus_der_region_"
+        },
+        {
+          "label": "Telefonnummer 2",
+          "name": "phone_number_2"
+        },
+        {
+          "label": "Pensum Backoffice",
+          "name": "pensum_backoffice"
+        },
+        {
+          "label": "DE Leads Contact Fit Score",
+          "name": "de_leads_contact_fit_score"
+        },
+        {
+          "label": "DE Leads Contact Fit Score threshold",
+          "name": "de_leads_contact_fit_score_threshold"
+        },
+        {
+          "label": "Opted out of email: DE Marketinginformationen",
+          "name": "hs_email_optout_789507687"
+        },
+        {
+          "label": "Opted out of email: Gedankenblicke von Alessia",
+          "name": "hs_email_optout_2593357676"
+        },
+        {
+          "label": "Opted out of email: One to One",
+          "name": "hs_email_optout_165753134"
+        },
+        {
+          "label": "Opted out of email: Support",
+          "name": "hs_email_optout_354282145"
+        },
+        {
+          "label": "Opted out of email: WhatsApp",
+          "name": "hs_email_optout_290609267"
+        },
+        {
+          "label": "Opted out of email: careköniz Informationen",
+          "name": "hs_email_optout_1057180583"
+        },
+        {
+          "label": "first_utm_adset",
+          "name": "first_utm_adset"
+        },
+        {
+          "label": "first_utm_campaign",
+          "name": "first_utm_campaign"
+        },
+        {
+          "label": "first_utm_content",
+          "name": "first_utm_content"
+        },
+        {
+          "label": "first_utm_medium",
+          "name": "first_utm_medium"
+        },
+        {
+          "label": "first_utm_source",
+          "name": "first_utm_source"
+        },
+        {
+          "label": "first_utm_term",
+          "name": "first_utm_term"
+        },
+        {
+          "label": "last_utm_term",
+          "name": "utm_term"
+        },
+        {
+          "label": "utm_form_combined",
+          "name": "utm_field_combined"
+        },
+        {
+          "label": "utm_id",
+          "name": "utm_id"
+        },
+        {
+          "label": "Advisor",
+          "name": "advisor"
+        },
+        {
+          "label": "Anstellung Backoffice",
+          "name": "anstellung_backoffice"
+        },
+        {
+          "label": "Ich habe schon in der Schweiz gearbeitet",
+          "name": "ich_habe_schon_in_der_schweiz_gearbeitet"
+        },
+        {
+          "label": "Invest-Stages",
+          "name": "invest_stages"
+        },
+        {
+          "label": "Seed-Round (2026Q2)",
+          "name": "seedround_2026q2"
+        },
+        {
+          "label": "Seed-Round (2026Q2) - Kommentar",
+          "name": "seedround_2026q2__kommentar"
+        },
+        {
+          "label": "Was ist dir lieber?",
+          "name": "was_ist_dir_lieber_"
+        }
+      ]
+    }
+  }
+}

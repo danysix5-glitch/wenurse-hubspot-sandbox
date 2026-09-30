@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt-Ansicht · WeNurse HubSpot-Sandbox</title>
+<link rel="stylesheet" href="../assets/hubspot.css">
+<link rel="stylesheet" href="../assets/sandbox.css">
+</head>
+<body>
+
+<div class="hs-app" id="hs-app"></div>
+
+<script>
+/* ============================================================================
+   Kontakt-Ansicht (Bewerbungsprofil / Lead)
+   Beispieldaten – frei änderbar.
+   ============================================================================ */
+window.SANDBOX_VIEW = {
+
+  datei: 'kontakt-bewerbungsprofil',
+  titel: 'Kontakt – Bewerbungsprofil (Lead)',
+  untertitel: 'Kontakt-Typ Nurse-Bewerbung · Aktivitäten-Feed',
+  objekt: 'Kontakt',
+  navAktiv: 'Kontakt',
+  zurueck: 'Contacts',
+
+  /* ---------------------------------------------------------- linke Spalte */
+  identitaet: {
+    name: 'Anna Bewerberin',
+    unter: 'Nurse-Bewerbung · Fachfrau Gesundheit EFZ',
+    avatar: { icon: 'person' },
+    badges: [
+      { text: 'Lead-Status: in Prüfung', farbe: 'hell' },
+      { text: 'Kanton ZH', farbe: 'hell' }
+    ]
+  },
+  aktionen: ['Note', 'Email', 'Call', 'Task', 'Meeting', 'More'],
+
+  links: {
+    karten: [
+      {
+        typ: 'abschnitt',
+        titel: 'Bewerbungsprofil (Lead)',
+        sbId: 'abschnitt-bewerbungsprofil',
+        spalten: 1,
+        felder: [
+          { label: 'Anrede_korrekt', wert: '', sbId: 'feld-anrede' },
+          { label: 'Contact owner', wert: 'Daniel Hassemer', art: 'person' },
+          { label: 'Kontakt-Typ', wert: 'Nurse-Bewerbung', art: 'token' },
+          { label: 'Aktueller Arbeitsbereich (Leads)', wert: 'Langzeitpflege', art: 'token' },
+          { label: 'E-Mail', wert: 'anna.bewerberin@example.ch', art: 'link', breit: true },
+          { label: 'Phone Number', wert: '+41 79 000 00 03', breit: true },
+          { label: 'Wohnregion', wert: 'Zürich', sbId: 'feld-wohnregion' },
+          { label: 'Postal Code', wert: '8004' },
+          { label: 'City', wert: 'Zürich' },
+          { label: 'Street Address', wert: '' }
+        ]
+      },
+      {
+        typ: 'abschnitt',
+        titel: 'Qualifikation',
+        sbId: 'abschnitt-qualifikation',
+        spalten: 1,
+        felder: [
+          { label: 'Grade (Diploma)', wert: 'Fachfrau Gesundheit EFZ', art: 'token' },
+          { label: 'Fachbereich', wert: 'Spital', art: 'token' },
+          { label: 'Pensenum in %', wert: '70 %', art: 'meter', prozent: 70 },
+          { label: 'Berufserfahrung (Jahre)', wert: '6' },
+          { label: 'Sprachen', wert: ['Deutsch', 'Englisch'], art: 'tokens' },
+          { label: 'Anerkennung SRK', wert: 'ja', art: 'token' }
+        ]
+      },
+      {
+        typ: 'abschnitt',
+        titel: 'Bewerbungsprozess',
+        sbId: 'abschnitt-prozess',
+        spalten: 1,
+        felder: [
+          { label: 'Eingang Bewerbung', wert: '14.09.2026' },
+          { label: 'Nächster Schritt', wert: 'Telefoninterview' },
+          { label: 'Interview geplant am', wert: '24.09.2026' },
+          { label: 'Verantwortlich', wert: 'Rita Beispiel', art: 'person' }
+        ]
+      }
+    ]
+  },
+
+  /* --------------------------------------------------------- mittlere Spalte */
+  mitte: {
+    tabs: ['Catch-up', 'Overview', 'Activities', 'Intelligence'],
+    aktivTab: 'Activities',
+    subTabs: ['All activities', 'Notes', 'Emails', 'Calls', 'Tasks', 'Meetings'],
+    aktivSubTab: 'All activities',
+    leiste: {
+      suche: true,
+      rechts: 'Collapse all',
+      chips: [
+        { text: 'Activity (38/44)', x: true },
+        { text: 'All time', pfeil: true },
+        { text: 'Activity assigned to', pfeil: true },
+        { text: 'HubSpot team', pfeil: true },
+        { text: 'Clear all', klar: true }
+      ]
+    },
+    karten: [
+      {
+        typ: 'feed',
+        sbId: 'feed',
+        gruppen: [
+          {
+            titel: 'Upcoming',
+            eintraege: [
+              {
+                typ: 'aufgabe',
+                kopf: [{ t: 'Task' }, { t: 'assigned to' }, { t: 'Rita Beispiel', stark: true }],
+                zeit: 'Fällig 24. Sep. 2026 08:00',
+                aufgabe: 'Feedback erhalten? Sonst auf Absage stellen.'
+              }
+            ]
+          },
+          {
+            titel: 'September 2026',
+            eintraege: [
+              {
+                typ: 'email',
+                kopf: [
+                  { t: 'Email tracking' },
+                  { t: 'Kurze Rückmeldung zu deinem Interesse bei WeNurse', stark: true }
+                ],
+                zeit: '21. Sep. 2026 14:52',
+                statusPunkt: 'grau',
+                fuss: [{ punkt: 'gruen', label: 'Opens', wert: '1' }, { label: 'Clicks', wert: '0' }]
+              },
+              {
+                typ: 'incoming',
+                kopf: [
+                  { t: 'Incoming email – Re: Kurze Rückmeldung zu deinem Interesse bei WeNurse from' },
+                  { t: 'Anna Bewerberin', stark: true }
+                ],
+                zeit: '21. Sep. 2026 14:51',
+                koerper: [
+                  'Hallo Daniel',
+                  'Vielen Dank für deine Nachfrage. Ich habe Interessen mehr über WeNurse zu erfahren, nur fehlt mir leider gerade die Zeit dafür. Ich melde mich in den nächsten Wochen wieder bei dir.'
+                ]
+              },
+              {
+                typ: 'email',
+                kopf: [
+                  { t: 'Email – Kurze Rückmeldung zu deinem Interesse bei WeNurse from' },
+                  { t: 'Rita Beispiel', stark: true }
+                ],
+                zeit: '21. Sep. 2026 10:25',
+                statusPunkt: 'gruen',
+                koerper: [
+                  'Hallo Anna Bewerberin',
+                  'Vielen Dank für dein Interesse an WeNurse – wir haben uns sehr über deine Kontaktaufnahme gefreut.',
+                  'Damit wir deine Bewerbung richtig einordnen können: In welchem Pensum und ab wann könntest du dir einen Einsatz vorstellen?'
+                ],
+                fuss: [{ punkt: 'gruen', label: 'Opens', wert: '1' }, { label: 'Clicks', wert: '0' }]
+              },
+              {
+                typ: 'anruf',
+                kopf: [{ t: 'Logged call – No answer' }, { t: 'Rita Beispiel', stark: true }],
+                zeit: '21. Sep. 2026 10:24',
+                koerper: [
+                  '3. Call – tel. scheint ausgeschaltet zu sein, heisst «Zielnummer zurzeit nicht erreichbar» – Mail gesendet.'
+                ]
+              },
+              {
+                typ: 'meeting',
+                offen: false,
+                kopf: [{ t: 'Meeting' }, { t: 'Telefoninterview', stark: true }],
+                zeit: '24. Sep. 2026 08:00'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  /* ---------------------------------------------------------- rechte Spalte */
+  rechts: {
+    titel: 'Record summary',
+    badge: '',
+    karten: [
+      {
+        typ: 'score',
+        titel: 'Lead Score',
+        sbId: 'karte-score',
+        badge: 'A3  CH Lead Score Simple',
+        wert: 100,
+        delta: '100 points',
+        zeilen: [
+          { label: 'Combined score', wert: '100' },
+          { label: 'Engagement score', wert: '23' },
+          { label: 'Fit score', wert: '77' }
+        ],
+        link: 'View details'
+      },
+      {
+        typ: 'leadStager',
+        titel: 'Lead stager tracker',
+        sbId: 'karte-leadstager',
+        tag: 'Primary',
+        fuellung: 18,
+        leisteText: '1 von 6 Stufen',
+        felder: [
+          { label: 'Owner', wert: 'Daniel Hassemer', art: 'person' },
+          { label: 'Lead type', wert: 'CH Lead' },
+          { label: 'Stage', wert: 'contact initiat… (Leads (Temp))' },
+          { label: 'Created on', wert: '16.09.2026, 18:03' }
+        ]
+      },
+      {
+        typ: 'liste',
+        titel: 'Companies',
+        anzahl: 0,
+        sbId: 'karte-companies',
+        add: true,
+        leerText: 'See the businesses or organizations associated with this record.',
+        alleLink: 'View all associated Companies'
+      },
+      {
+        typ: 'liste',
+        titel: 'Deals',
+        anzahl: 0,
+        sbId: 'karte-deals',
+        add: true,
+        leerText: 'Noch kein Einsatz-Deal mit dieser Person verknüpft.',
+        alleLink: 'View all associated Deals'
+      },
+      { typ: 'anhaenge', titel: 'Attachments', sbId: 'karte-anhaenge' }
+    ]
+  },
+
+  /* ------------------------------------------------- Änderungsvorschläge ---- */
+  aenderungen: [
+    {
+      nr: 1,
+      titel: '«Bewerbungsprofil» nach Logik gruppiert',
+      ziel: 'abschnitt-bewerbungsprofil',
+      text: 'Erst Person + Kontaktweg, dann Qualifikation, dann Prozess. Heute stehen Qualifikation und Prozessdaten gemischt in zwei Abschnitten.'
+    },
+    {
+      nr: 2,
+      titel: 'Feldbeschriftung «Anrede_korrekt» → «Anrede geprüft»',
+      ziel: 'feld-anrede',
+      text: 'Interner Feldname wird heute als Beschriftung angezeigt (Unterstrich). Zusätzlich als Ja/Nein-Auswahl statt Freitext.'
+    },
+    {
+      nr: 3,
+      titel: '«Wohnregion» vereinheitlichen',
+      ziel: 'feld-wohnregion',
+      text: 'Als Dropdown mit den sechs Einsatzregionen (Zürich, Ostschweiz, Bern, Basel, Zentralschweiz, Westschweiz) – damit die Einsatzzuordnung filterbar wird.'
+    },
+    {
+      nr: 4,
+      titel: '«Qualifikation» ergänzt',
+      ziel: 'abschnitt-qualifikation',
+      text: 'Neue Felder: Sprachen, Anerkennung SRK, Berufserfahrung in Jahren. Diese Angaben fragen wir heute telefonisch ab und notieren sie in der Notiz.'
+    },
+    {
+      nr: 5,
+      titel: 'Aktivitäten-Feed begrenzen',
+      ziel: 'feed',
+      text: 'Standardmässig die letzten 20 Aktivitäten laden, Rest auf Knopfdruck. Der Feed ist heute 44 Einträge lang und beim Öffnen langsam.'
+    },
+    {
+      nr: 6,
+      titel: 'Lead-Score-Karte kompakter',
+      ziel: 'karte-score',
+      text: 'Nur die Gesamtnote zeigen, Engagement- und Fit-Score erst beim Aufklappen – die Karte nimmt sonst ein Viertel der rechten Spalte ein.'
+    }
+  ]
+};
+</script>
+
+<script src="../assets/hubspot.js"></script>
+<script src="../data/segmente.js"></script>
+<script src="../assets/sandbox.js"></script>
+</body>
+</html>
